@@ -3,118 +3,405 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Viena — Editor Visual</title>
-<link rel="stylesheet" href="style.css">
+<title>Viena • Editor Visual</title>
 <style>
-:root{--ed-bg:#090909;--ed-panel:#121212;--ed-panel2:#181818;--ed-line:#292929;--ed-text:#f5f5f5;--ed-muted:#a4a4a4;--ed-accent:#e50914}
-*{box-sizing:border-box}body{margin:0;background:var(--ed-bg);color:var(--ed-text);font-family:Arial,sans-serif;overflow:hidden}.editor{height:100vh;display:grid;grid-template-columns:390px 1fr;grid-template-rows:64px 1fr}.ed-top{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:10px 18px;border-bottom:1px solid var(--ed-line);background:#0d0d0d}.ed-top h1{font-size:15px;margin:0}.ed-top small{color:var(--ed-muted)}.spacer{flex:1}.btn{border:1px solid var(--ed-line);background:#171717;color:#fff;border-radius:8px;padding:10px 13px;cursor:pointer}.btn:hover{border-color:#555}.btn.primary{background:var(--ed-accent);border-color:var(--ed-accent)}.ed-side{overflow:auto;border-right:1px solid var(--ed-line);padding:16px}.tabs{display:flex;gap:6px;margin-bottom:14px}.tab{flex:1;padding:9px 6px;background:#171717;border:1px solid var(--ed-line);color:#bbb;border-radius:7px;cursor:pointer}.tab.active{background:#242424;color:#fff;border-color:#555}.panel{display:none}.panel.active{display:block}.group{border:1px solid var(--ed-line);border-radius:10px;margin-bottom:10px;background:var(--ed-panel);overflow:hidden}.group summary{padding:12px;font-weight:700;cursor:pointer}.fields{padding:0 12px 12px}.field{margin:11px 0}.field label{display:block;font-size:11px;color:#aaa;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em}.field input,.field textarea,.field select{width:100%;border:1px solid #303030;background:#0b0b0b;color:#fff;border-radius:7px;padding:9px;outline:none}.field textarea{min-height:80px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--ed-accent)}.check{display:flex;align-items:center;gap:8px}.check label{margin:0;text-transform:none;font-size:13px}.ed-preview{background:#202020;padding:16px;overflow:hidden}.preview-wrap{height:100%;border:1px solid #3a3a3a;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 15px 50px #000}.preview-bar{height:34px;background:#151515;border-bottom:1px solid #333;display:flex;align-items:center;gap:7px;padding:0 12px}.dot{width:8px;height:8px;border-radius:50%;background:#555}.preview-label{margin-left:7px;color:#888;font-size:11px}.preview-frame{width:100%;height:calc(100% - 34px);border:0;background:#000}.hint{font-size:11px;color:#777;line-height:1.4}.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cat-item,.rule-item,.sub-editor{border:1px solid #303030;border-radius:8px;padding:10px;margin-bottom:8px;background:#101010}.sub-editor{margin-top:10px;background:#0d0d0d;border-color:#3a3a3a}.sub-editor>.cat-head{margin-bottom:8px}.cat-head,.rule-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.cat-head strong,.rule-head strong{font-size:12px}.mini{padding:6px 8px;font-size:11px}.danger{color:#ff7070}.notice{position:fixed;bottom:15px;left:410px;background:#171717;border:1px solid #333;border-radius:9px;padding:10px 14px;font-size:12px;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.notice.show{opacity:1;transform:none}.file-row{display:flex;gap:6px}.file-row input[type=file]{font-size:11px}
-@media(max-width:900px){.editor{grid-template-columns:1fr;grid-template-rows:64px 48vh 52vh}.ed-side{border-right:0;border-bottom:1px solid var(--ed-line)}.ed-preview{padding:8px}.notice{left:15px}}
+:root{
+  --bg:#070707;--panel:#0e0e0f;--panel2:#151517;--line:#29292d;--text:#f5f5f7;
+  --muted:#9d9da7;--accent:#c50000;--danger:#ff5c68;--ok:#38d996;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;overflow:hidden}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.shell{height:100vh;display:grid;grid-template-columns:400px 1fr;grid-template-rows:72px 1fr}
+.topbar{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);background:#0b0b0c}
+.brand{display:flex;align-items:center;gap:12px;min-width:250px}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#ff1f1f,#700000);display:grid;place-items:center;font-weight:900;box-shadow:0 0 24px rgba(197,0,0,.3)}
+.brand h1{font-size:14px;margin:0;letter-spacing:.08em}
+.brand p{font-size:11px;color:var(--muted);margin:2px 0 0}
+.spacer{flex:1}
+.status{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#111113;font-size:12px;color:#c9c9cf}
+.status-dot{width:8px;height:8px;border-radius:999px;background:#666}
+.status.ok .status-dot{background:var(--ok)}
+.status.warn .status-dot{background:#f4b940}
+.avatar{width:26px;height:26px;border-radius:999px;object-fit:cover;display:none}
+.btn{border:1px solid var(--line);background:#161619;color:#fff;border-radius:9px;padding:10px 13px}
+.btn:hover{border-color:#55555e}
+.btn.primary{background:var(--accent);border-color:var(--accent);font-weight:800}
+.btn.success{background:#11392b;border-color:#1f7d59}
+.btn.danger{color:#ff8a92}
+.btn.mini{padding:6px 8px;font-size:11px;border-radius:7px}
+.sidebar{overflow:auto;border-right:1px solid var(--line);background:var(--panel);padding:14px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.tab{border:1px solid var(--line);background:#151517;color:#aaa;padding:10px;border-radius:8px}
+.tab.active{background:#202024;color:#fff;border-color:#4a4a52}
+.panel{display:none}
+.panel.active{display:block}
+.card{border:1px solid var(--line);border-radius:12px;background:var(--panel2);margin-bottom:10px;overflow:hidden}
+.card summary{list-style:none;padding:13px 14px;font-weight:800;font-size:13px;cursor:pointer}
+.card summary::-webkit-details-marker{display:none}
+.card-body{padding:0 13px 13px}
+.field{margin:10px 0}
+.field label{display:block;font-size:10px;color:#aaa;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;border:1px solid #303036;background:#0b0b0d;color:#fff;border-radius:8px;padding:9px 10px;outline:none}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.check{display:flex;align-items:center;gap:8px}
+.check input{width:auto}
+.check label{margin:0;text-transform:none;letter-spacing:0;font-size:12px}
+.color-row{display:grid;grid-template-columns:48px 1fr;gap:8px}
+.color-row input[type=color]{height:38px;padding:3px}
+.item{border:1px solid #303036;border-radius:10px;padding:10px;margin:8px 0;background:#101012}
+.item-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.item-head strong{font-size:12px}
+.subitem{border-left:2px solid #3a3a40;padding-left:8px;margin:10px 0}
+.rule{border:1px dashed #36363d;border-radius:9px;padding:9px;margin:8px 0;background:#0c0c0e}
+.preview-area{padding:16px;background:#1b1b1d;overflow:hidden}
+.preview-box{height:100%;border:1px solid #36363d;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 18px 55px rgba(0,0,0,.4)}
+.preview-bar{height:36px;background:#111113;border-bottom:1px solid #2b2b30;display:flex;align-items:center;gap:7px;padding:0 12px}
+.dot{width:8px;height:8px;border-radius:999px;background:#555}
+.preview-label{margin-left:6px;color:#85858f;font-size:11px}
+iframe{width:100%;height:calc(100% - 36px);border:0;background:#000}
+.toast{position:fixed;right:22px;bottom:22px;max-width:420px;background:#121214;border:1px solid #3a3a40;border-radius:10px;padding:12px 14px;font-size:12px;opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1;transform:none}
+.toast.error{border-color:#7b252d;color:#ffb7bd}
+.toast.ok{border-color:#1f6a4c;color:#bff6df}
+.hint{font-size:11px;color:#7f7f88;line-height:1.45;margin:12px 2px}
+.inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.auth-info{font-size:11px;color:#8e8e97}
+.divider{height:1px;background:#29292d;margin:10px 0}
+.empty{font-size:11px;color:#777;padding:10px 0}
+@media(max-width:1000px){
+  body{overflow:auto}
+  .shell{height:auto;min-height:100vh;grid-template-columns:1fr;grid-template-rows:auto auto 65vh}
+  .topbar{grid-column:1;position:sticky;top:0;z-index:20;flex-wrap:wrap}
+  .sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:55vh}
+  .preview-area{min-height:65vh}
+}
 </style>
 </head>
 <body>
-<div class="editor">
-<header class="ed-top"><div><h1>VIENA — EDITOR VISUAL</h1><small>Edite e veja a mudança na hora</small></div><div class="spacer"></div><button class="btn" id="loadBtn">↻ Recarregar</button><button class="btn" id="draftBtn">💾 Rascunho</button><button class="btn" id="adminBtn">Abrir Admin</button><button class="btn primary" id="downloadBtn">Baixar JSON</button></header>
-<aside class="ed-side">
-<div class="tabs"><button class="tab active" data-tab="site">Site</button><button class="tab" data-tab="rules">Regras</button></div>
-<div class="panel active" id="panel-site"></div><div class="panel" id="panel-rules"></div>
-<p class="hint">A prévia usa o mesmo index.html, style.css e app.js do site. As alterações são apenas um rascunho no navegador até você baixar/salvar os JSONs.</p>
-</aside>
-<main class="ed-preview"><div class="preview-wrap"><div class="preview-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="preview-label">prévia real — viena roleplay</span></div><iframe class="preview-frame" id="preview" src="index.html"></iframe></div></main>
-</div><div class="notice" id="notice"></div>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">V</div>
+      <div><h1>VIENA • EDITOR VISUAL</h1><p>Edite, visualize e publique direto no site</p></div>
+    </div>
+
+    <div id="authStatus" class="status warn">
+      <span class="status-dot"></span>
+      <img id="userAvatar" class="avatar" alt="">
+      <span id="authText">Não conectado</span>
+    </div>
+
+    <div class="spacer"></div>
+    <button class="btn" id="reloadBtn">↻ Recarregar</button>
+    <button class="btn" id="draftBtn">💾 Rascunho</button>
+    <button class="btn" id="adminBtn">Sveltia</button>
+    <button class="btn" id="loginBtn">Entrar com GitHub</button>
+    <button class="btn primary" id="publishBtn">PUBLICAR</button>
+  </header>
+
+  <aside class="sidebar">
+    <div class="tabs">
+      <button class="tab active" data-tab="site">SITE</button>
+      <button class="tab" data-tab="rules">REGRAS</button>
+    </div>
+    <section class="panel active" id="panel-site"></section>
+    <section class="panel" id="panel-rules"></section>
+    <p class="hint">
+      <b>Rascunho</b> salva somente neste navegador. <b>PUBLICAR</b> grava diretamente no GitHub e atualiza o site pelo GitHub Pages.
+    </p>
+  </aside>
+
+  <main class="preview-area">
+    <div class="preview-box">
+      <div class="preview-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="preview-label">prévia real • viena roleplay</span>
+      </div>
+      <iframe id="preview" src="index.html"></iframe>
+    </div>
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-let site={},data={};
-const defaults={theme:{accent:'#e50914',accent_light:'#ff4650',background:'#090909',surface:'#121212',text:'#f5f5f5',muted:'#9b9b9b'},layout:{show_search:true,show_updates:true,show_notice:true,show_hero_image:true,show_admin_link:false},cursor:{enabled:true,size:34,trail_enabled:true,trail_type:'paint',trail_color:'#e50914',trail_count:10,falling_particles:{enabled:true,type:'letters',color:'#e50914',count:34,size:14}}};
-function merge(a,b){return {...b,...a,theme:{...b.theme,...(a.theme||{})},layout:{...b.layout,...(a.layout||{})},cursor:{...b.cursor,...(a.cursor||{}),falling_particles:{...b.cursor.falling_particles,...(a.cursor?.falling_particles||{})}}}}
-async function load(){
- try{const [s,r]=await Promise.all([fetch('content/site.json?x='+Date.now()).then(x=>x.json()),fetch('content/rules.json?x='+Date.now()).then(x=>x.json())]);site=merge(s,defaults);data=r||{categories:[],updates:[]};
- const saved=localStorage.getItem('viena-editor-draft');if(saved){const d=JSON.parse(saved);site=d.site||site;data=d.data||data;notice('Rascunho carregado.');}
- render();send();}catch(e){console.error(e);notice('Não consegui carregar os JSONs.');}}
-function esc(v){return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function field(label,path,type='text',extra=''){const val=get(path);return `<div class="field"><label>${label}</label>${type==='textarea'?`<textarea data-path="${path}">${esc(val)}</textarea>`:type==='check'?`<div class="check"><input type="checkbox" data-path="${path}" ${val?'checked':''}><label>Ativado</label></div>`:type==='select'?`<select data-path="${path}">${extra.split('|').map(x=>{let [v,l]=x.split(':');return `<option value="${v}" ${String(val)==v?'selected':''}>${l}</option>`}).join('')}</select>`:`<input data-path="${path}" value="${esc(val)}">`}</div>`}
-function get(path){return path.split('.').reduce((o,k)=>o?.[k],site)??''}
-function set(path,val){let p=path.split('.'),o=site;for(let i=0;i<p.length-1;i++){if(!o[p[i]])o[p[i]]={};o=o[p[i]]}o[p.at(-1)]=val}
+const REPO = 'vienarp/vienarp.github.io';
+const BRANCH = 'main';
+const AUTH_BASE = 'https://sveltia-cms-auth.bab-amorim13.workers.dev';
+const SITE_PATH = 'content/site.json';
+const RULES_PATH = 'rules.json';
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+let site = {};
+let data = {categories:[],updates:[]};
+let githubToken = sessionStorage.getItem('viena-gh-token') || '';
+let githubUser = null;
+let oauthWindow = null;
+
+const defaults = {
+  theme:{accent:'#c50000',accent_light:'#ff4650',background:'#090909',surface:'#121212',text:'#f5f5f5',muted:'#9b9b9b'},
+  layout:{show_search:true,show_updates:true,show_notice:true,show_hero_image:true,show_admin_link:false},
+  cursor:{enabled:true,size:34,trail_enabled:true,trail_type:'paint',trail_color:'#c50000',trail_count:10,
+    falling_particles:{enabled:true,type:'letters',color:'#c50000',count:34,size:14}}
+};
+
+function mergeSite(a={}, b=defaults){
+  return {
+    ...b,...a,
+    theme:{...b.theme,...(a.theme||{})},
+    layout:{...b.layout,...(a.layout||{})},
+    cursor:{
+      ...b.cursor,...(a.cursor||{}),
+      falling_particles:{...b.cursor.falling_particles,...(a.cursor?.falling_particles||{})}
+    }
+  };
+}
+
+function toast(text,type=''){
+  const el=$('#toast');
+  el.textContent=text;
+  el.className='toast show '+type;
+  clearTimeout(window.__toast);
+  window.__toast=setTimeout(()=>el.className='toast',3200);
+}
+
+function esc(v){
+  return String(v??'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function getPath(path){
+  return path.split('.').reduce((o,k)=>o?.[k],site) ?? '';
+}
+
+function setPath(path,val){
+  const parts=path.split('.');
+  let o=site;
+  for(let i=0;i<parts.length-1;i++){
+    if(!o[parts[i]] || typeof o[parts[i]]!=='object') o[parts[i]]={};
+    o=o[parts[i]];
+  }
+  o[parts.at(-1)]=val;
+}
+
+function field(label,path,type='text',opts=''){
+  const val=getPath(path);
+  if(type==='textarea'){
+    return `<div class="field"><label>${label}</label><textarea data-path="${path}">${esc(val)}</textarea></div>`;
+  }
+  if(type==='check'){
+    return `<div class="field"><div class="check"><input type="checkbox" data-path="${path}" ${val?'checked':''}><label>${label}</label></div></div>`;
+  }
+  if(type==='select'){
+    const options=opts.split('|').map(x=>{
+      const [v,l]=x.split(':');
+      return `<option value="${esc(v)}" ${String(val)===v?'selected':''}>${esc(l)}</option>`;
+    }).join('');
+    return `<div class="field"><label>${label}</label><select data-path="${path}">${options}</select></div>`;
+  }
+  if(type==='color'){
+    const safe=/^#[0-9a-f]{6}$/i.test(String(val))?val:'#c50000';
+    return `<div class="field"><label>${label}</label><div class="color-row"><input type="color" data-color-path="${path}" value="${safe}"><input data-path="${path}" value="${esc(val)}"></div></div>`;
+  }
+  return `<div class="field"><label>${label}</label><input data-path="${path}" value="${esc(val)}"></div>`;
+}
+
+async function load(forceRemote=false){
+  try{
+    const [s,r]=await Promise.all([
+      fetch(`${SITE_PATH}?v=${Date.now()}`,{cache:'no-store'}).then(x=>{
+        if(!x.ok) throw new Error('site.json não encontrado');
+        return x.json();
+      }),
+      fetch(`${RULES_PATH}?v=${Date.now()}`,{cache:'no-store'}).then(x=>{
+        if(!x.ok) throw new Error('rules.json não encontrado');
+        return x.json();
+      })
+    ]);
+
+    site=mergeSite(s);
+    data=r || {categories:[],updates:[]};
+    if(!Array.isArray(data.categories)) data.categories=[];
+    if(!Array.isArray(data.updates)) data.updates=[];
+
+    if(!forceRemote){
+      const saved=localStorage.getItem('viena-editor-draft');
+      if(saved){
+        try{
+          const d=JSON.parse(saved);
+          site=d.site ? mergeSite(d.site) : site;
+          data=d.data || data;
+          toast('Rascunho local carregado.','ok');
+        }catch{}
+      }
+    }
+
+    render();
+    sendPreview();
+  }catch(err){
+    console.error(err);
+    toast('Erro ao carregar os arquivos do site: '+err.message,'error');
+  }
+}
+
 function render(){
- $('#panel-site').innerHTML=`<details class="group" open><summary>🏠 Capa e identidade</summary><div class="fields">${field('Nome da cidade','site_name')}${field('Título principal','site_title')}${field('Bordão','tagline')}${field('Descrição','description','textarea')}${field('Logo','logo')}${field('Favicon','favicon')}${field('Discord','discord_url')}${field('Texto pequeno','hero_eyebrow')}${field('Título da capa','hero_title')}${field('Texto da capa','hero_text','textarea')}${field('Imagem da capa','hero_image')}${field('Título do aviso','notice_title')}${field('Texto do aviso','notice_text','textarea')}${field('Rodapé','footer_text')}</div></details>
- <details class="group"><summary>🎨 Cores</summary><div class="fields">${['accent','accent_light','background','surface','text','muted'].map(x=>field(x,'theme.'+x)).join('')}</div></details>
- <details class="group"><summary>👁️ Elementos</summary><div class="fields">${['show_search','show_updates','show_notice','show_hero_image','show_admin_link'].map(x=>field(x,'layout.'+x,'check')).join('')}</div></details>
- <details class="group"><summary>🖱️ Cursor e rastro</summary><div class="fields">${field('Cursor ativo','cursor.enabled','check')}${field('Imagem do cursor','cursor.image')}${field('Tamanho','cursor.size')}${field('Rastro ativo','cursor.trail_enabled','check')}${field('Tipo do rastro','cursor.trail_type','select','paint:Pincelada|spray:Spray|glow:Glow')}${field('Cor','cursor.trail_color')}${field('Partículas do rastro','cursor.trail_count')}</div></details>
- <details class="group"><summary>✨ Partículas caindo</summary><div class="fields">${field('Ativar','cursor.falling_particles.enabled','check')}${field('Tipo','cursor.falling_particles.type','select','letters:Letras|logo:Logo|mixed:Misto|spark:Brilhos')}${field('Logo','cursor.falling_particles.image')}${field('Cor','cursor.falling_particles.color')}${field('Quantidade','cursor.falling_particles.count')}${field('Tamanho','cursor.falling_particles.size')}</div></details>`;
- renderRules();bind();}
+  $('#panel-site').innerHTML=`
+    <details class="card" open>
+      <summary>🏠 Capa e identidade</summary>
+      <div class="card-body">
+        ${field('Nome da cidade','site_name')}
+        ${field('Título principal','site_title')}
+        ${field('Bordão','tagline')}
+        ${field('Descrição','description','textarea')}
+        ${field('Logo','logo')}
+        ${field('Favicon','favicon')}
+        ${field('Discord','discord_url')}
+        ${field('Texto pequeno da capa','hero_eyebrow')}
+        ${field('Título da capa','hero_title')}
+        ${field('Texto da capa','hero_text','textarea')}
+        ${field('Imagem da capa','hero_image')}
+        ${field('Título do aviso','notice_title')}
+        ${field('Texto do aviso','notice_text','textarea')}
+        ${field('Rodapé','footer_text')}
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>🎨 Cores</summary>
+      <div class="card-body">
+        ${field('Cor principal','theme.accent','color')}
+        ${field('Cor principal clara','theme.accent_light','color')}
+        ${field('Fundo','theme.background','color')}
+        ${field('Superfície','theme.surface','color')}
+        ${field('Texto','theme.text','color')}
+        ${field('Texto secundário','theme.muted','color')}
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>👁️ Elementos do site</summary>
+      <div class="card-body">
+        ${field('Mostrar pesquisa','layout.show_search','check')}
+        ${field('Mostrar atualizações','layout.show_updates','check')}
+        ${field('Mostrar aviso','layout.show_notice','check')}
+        ${field('Mostrar imagem da capa','layout.show_hero_image','check')}
+        ${field('Mostrar link do admin','layout.show_admin_link','check')}
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>🖱️ Cursor e rastro</summary>
+      <div class="card-body">
+        ${field('Cursor ativo','cursor.enabled','check')}
+        ${field('Imagem do cursor','cursor.image')}
+        ${field('Tamanho','cursor.size')}
+        ${field('Rastro ativo','cursor.trail_enabled','check')}
+        ${field('Tipo do rastro','cursor.trail_type','select','paint:Pincelada|spray:Spray|glow:Glow')}
+        ${field('Cor do rastro','cursor.trail_color','color')}
+        ${field('Quantidade','cursor.trail_count')}
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>✨ Partículas caindo</summary>
+      <div class="card-body">
+        ${field('Ativar partículas','cursor.falling_particles.enabled','check')}
+        ${field('Tipo','cursor.falling_particles.type','select','letters:Letras|logo:Logo|mixed:Misto|spark:Brilhos')}
+        ${field('Imagem / logo','cursor.falling_particles.image')}
+        ${field('Cor','cursor.falling_particles.color','color')}
+        ${field('Quantidade','cursor.falling_particles.count')}
+        ${field('Tamanho','cursor.falling_particles.size')}
+      </div>
+    </details>`;
+
+  renderRules();
+  bindEditor();
+}
+
 function renderRules(){
-  let p=$('#panel-rules');
-  p.innerHTML=`
-    <details class="group" open>
+  const panel=$('#panel-rules');
+  panel.innerHTML=`
+    <details class="card" open>
       <summary>📕 Categorias</summary>
-      <div class="fields">
+      <div class="card-body">
         <button class="btn primary" id="addCat">+ Adicionar categoria</button>
         <div id="cats"></div>
       </div>
     </details>
-    <details class="group">
+    <details class="card">
       <summary>📝 Últimas alterações</summary>
-      <div class="fields">
+      <div class="card-body">
         <button class="btn" id="addUpd">+ Adicionar alteração</button>
         <div id="updates"></div>
       </div>
     </details>`;
 
   const cats=$('#cats');
-  (data.categories||[]).forEach((c,i)=>{
-    c.subcategories=Array.isArray(c.subcategories)?c.subcategories:[];
-    c.rules=Array.isArray(c.rules)?c.rules:[];
+  if(!data.categories.length) cats.innerHTML='<div class="empty">Nenhuma categoria cadastrada.</div>';
 
-    const d=document.createElement('div');
-    d.className='cat-item';
-    d.innerHTML=`
-      <div class="cat-head">
-        <strong>${esc(c.code||'SEM CÓDIGO')} — ${esc(c.short||c.name||'Categoria')}</strong>
+  data.categories.forEach((c,i)=>{
+    c.rules=Array.isArray(c.rules)?c.rules:[];
+    c.subcategories=Array.isArray(c.subcategories)?c.subcategories:[];
+    const el=document.createElement('div');
+    el.className='item';
+    el.innerHTML=`
+      <div class="item-head">
+        <strong>${esc(c.code||'--')} • ${esc(c.short||c.name||'Categoria')}</strong>
         <button class="btn mini danger" data-del-cat="${i}">Excluir</button>
       </div>
-
       <div class="field"><label>ID</label><input data-cat="${i}" data-k="id" value="${esc(c.id||'')}"></div>
-      <div class="row">
+      <div class="field-row">
         <div class="field"><label>Código</label><input data-cat="${i}" data-k="code" value="${esc(c.code||'')}"></div>
         <div class="field"><label>Nome curto</label><input data-cat="${i}" data-k="short" value="${esc(c.short||'')}"></div>
       </div>
       <div class="field"><label>Nome</label><input data-cat="${i}" data-k="name" value="${esc(c.name||'')}"></div>
       <div class="field"><label>Descrição</label><textarea data-cat="${i}" data-k="desc">${esc(c.desc||'')}</textarea></div>
-      <div class="field"><label>Imagem da categoria</label><input data-cat="${i}" data-k="image" value="${esc(c.image||'')}"></div>
+      <div class="field"><label>Imagem</label><input data-cat="${i}" data-k="image" value="${esc(c.image||'')}"></div>
 
-      <div class="rule-head">
-        <strong>📂 Subcategorias (${c.subcategories.length})</strong>
-        <button class="btn mini" data-add-sub="${i}">+ Subcategoria</button>
-      </div>
-      <div class="sub-editor-list">
-        ${c.subcategories.map((sub,j)=>renderSubEditor(c,i,sub,j)).join('')}
-      </div>
+      <div class="divider"></div>
+      <div class="item-head"><strong>📂 Subcategorias (${c.subcategories.length})</strong><button class="btn mini" data-add-sub="${i}">+ Subcategoria</button></div>
+      <div>${c.subcategories.map((sub,j)=>subEditor(sub,i,j)).join('')}</div>
 
-      <div class="rule-head" style="margin-top:12px">
-        <strong>Regras diretas (${c.rules.length})</strong>
-        <button class="btn mini" data-add-rule="${i}">+ Regra</button>
-      </div>
-      <div>
-        ${c.rules.map((r,j)=>renderRuleEditor(r,i,j)).join('')}
-      </div>`;
-    cats.appendChild(d);
+      <div class="divider"></div>
+      <div class="item-head"><strong>📄 Regras diretas (${c.rules.length})</strong><button class="btn mini" data-add-rule="${i}">+ Regra</button></div>
+      <div>${c.rules.map((r,j)=>ruleEditor(r,i,j)).join('')}</div>
+    `;
+    cats.appendChild(el);
   });
 
-  const up=$('#updates');
-  (data.updates||[]).forEach((u,i)=>{
-    let d=document.createElement('div');
-    d.className='cat-item';
-    d.innerHTML=`<div class="row">${['date','title','text','tag'].map(k=>`<div class="field"><label>${k}</label><input data-upd="${i}" data-k="${k}" value="${esc(u[k]||'')}"></div>`).join('')}</div><button class="btn mini danger" data-del-upd="${i}">Excluir</button>`;
-    up.appendChild(d);
+  const updates=$('#updates');
+  if(!data.updates.length) updates.innerHTML='<div class="empty">Nenhuma alteração cadastrada.</div>';
+  data.updates.forEach((u,i)=>{
+    const el=document.createElement('div');
+    el.className='item';
+    el.innerHTML=`
+      <div class="field-row">
+        <div class="field"><label>Data</label><input data-upd="${i}" data-k="date" value="${esc(u.date||'')}"></div>
+        <div class="field"><label>Tag</label><input data-upd="${i}" data-k="tag" value="${esc(u.tag||'')}"></div>
+      </div>
+      <div class="field"><label>Título</label><input data-upd="${i}" data-k="title" value="${esc(u.title||'')}"></div>
+      <div class="field"><label>Texto</label><textarea data-upd="${i}" data-k="text">${esc(u.text||'')}</textarea></div>
+      <button class="btn mini danger" data-del-upd="${i}">Excluir</button>
+    `;
+    updates.appendChild(el);
   });
 }
 
-function renderRuleEditor(r,i,j,prefix='rule'){
-  return `<div class="rule-item">
-    <div class="rule-head">
-      <strong>${esc(r.code||'')} — ${esc(r.title||'Sem título')}</strong>
+function ruleEditor(r,i,j){
+  return `<div class="rule">
+    <div class="item-head">
+      <strong>${esc(r.code||'')} • ${esc(r.title||'Sem título')}</strong>
       <button class="btn mini danger" data-del-rule="${i}:${j}">Excluir</button>
     </div>
-    <div class="row">
+    <div class="field-row">
       <div class="field"><label>Código</label><input data-rule="${i}:${j}" data-k="code" value="${esc(r.code||'')}"></div>
       <div class="field"><label>Tag</label><input data-rule="${i}:${j}" data-k="tag" value="${esc(r.tag||'REGRA')}"></div>
     </div>
@@ -124,33 +411,33 @@ function renderRuleEditor(r,i,j,prefix='rule'){
   </div>`;
 }
 
-function renderSubEditor(category, i, sub, j){
+function subEditor(sub,i,j){
   sub.rules=Array.isArray(sub.rules)?sub.rules:[];
-  return `<div class="sub-editor">
-    <div class="cat-head">
+  return `<div class="subitem">
+    <div class="item-head">
       <strong>☰ ${esc(sub.name||'Nova subcategoria')}</strong>
       <button class="btn mini danger" data-del-sub="${i}:${j}">Excluir</button>
     </div>
-    <div class="row">
-      <div class="field"><label>ID da subcategoria</label><input data-sub="${i}:${j}" data-k="id" value="${esc(sub.id||'')}"></div>
+    <div class="field-row">
+      <div class="field"><label>ID</label><input data-sub="${i}:${j}" data-k="id" value="${esc(sub.id||'')}"></div>
       <div class="field"><label>Ícone</label><input data-sub="${i}:${j}" data-k="icon" value="${esc(sub.icon||'◈')}"></div>
     </div>
-    <div class="field"><label>Nome da subcategoria</label><input data-sub="${i}:${j}" data-k="name" value="${esc(sub.name||'')}"></div>
-    <div class="rule-head">
+    <div class="field"><label>Nome</label><input data-sub="${i}:${j}" data-k="name" value="${esc(sub.name||'')}"></div>
+    <div class="item-head">
       <strong>Regras (${sub.rules.length})</strong>
       <button class="btn mini" data-add-sub-rule="${i}:${j}">+ Regra</button>
     </div>
-    <div>${sub.rules.map((r,k)=>renderSubRuleEditor(r,i,j,k)).join('')}</div>
+    ${sub.rules.map((r,k)=>subRuleEditor(r,i,j,k)).join('')}
   </div>`;
 }
 
-function renderSubRuleEditor(r,i,j,k){
-  return `<div class="rule-item">
-    <div class="rule-head">
-      <strong>${esc(r.code||'')} — ${esc(r.title||'Sem título')}</strong>
+function subRuleEditor(r,i,j,k){
+  return `<div class="rule">
+    <div class="item-head">
+      <strong>${esc(r.code||'')} • ${esc(r.title||'Sem título')}</strong>
       <button class="btn mini danger" data-del-sub-rule="${i}:${j}:${k}">Excluir</button>
     </div>
-    <div class="row">
+    <div class="field-row">
       <div class="field"><label>Código</label><input data-sub-rule="${i}:${j}:${k}" data-k="code" value="${esc(r.code||'')}"></div>
       <div class="field"><label>Tag</label><input data-sub-rule="${i}:${j}:${k}" data-k="tag" value="${esc(r.tag||'REGRA')}"></div>
     </div>
@@ -160,75 +447,308 @@ function renderSubRuleEditor(r,i,j,k){
   </div>`;
 }
 
-function bind(){
-  $$('[data-path]').forEach(el=>el.oninput=()=>{set(el.dataset.path,el.type==='checkbox'?el.checked:el.value);send()});
+function bindEditor(){
+  $$('[data-path]').forEach(el=>{
+    el.oninput=()=>{
+      let val=el.type==='checkbox'?el.checked:el.value;
+      if(['cursor.size','cursor.trail_count','cursor.falling_particles.count','cursor.falling_particles.size'].includes(el.dataset.path)){
+        const n=Number(val); if(Number.isFinite(n)) val=n;
+      }
+      setPath(el.dataset.path,val);
+      const color=$(`[data-color-path="${el.dataset.path}"]`);
+      if(color && /^#[0-9a-f]{6}$/i.test(String(val))) color.value=val;
+      sendPreview();
+    };
+  });
+
+  $$('[data-color-path]').forEach(el=>{
+    el.oninput=()=>{
+      setPath(el.dataset.colorPath,el.value);
+      const text=$(`[data-path="${el.dataset.colorPath}"]`);
+      if(text) text.value=el.value;
+      sendPreview();
+    };
+  });
 
   $('#addCat')?.addEventListener('click',()=>{
-    data.categories=data.categories||[];
-    data.categories.push({id:'',code:'',name:'',short:'',desc:'',image:'',rules:[],subcategories:[]});
-    renderRules();send();
+    data.categories.push({id:'',code:'',name:'',short:'',desc:'',image:'',subcategories:[],rules:[]});
+    renderRules(); bindEditor(); sendPreview();
   });
 
   $('#addUpd')?.addEventListener('click',()=>{
-    data.updates=data.updates||[];
     data.updates.push({date:'',title:'',text:'',tag:''});
-    renderRules();send();
+    renderRules(); bindEditor(); sendPreview();
   });
 
-  $$('[data-cat]').forEach(el=>el.oninput=()=>{data.categories[+el.dataset.cat][el.dataset.k]=el.value;send()});
-
+  $$('[data-cat]').forEach(el=>el.oninput=()=>{
+    data.categories[+el.dataset.cat][el.dataset.k]=el.value; sendPreview();
+  });
   $$('[data-rule]').forEach(el=>el.oninput=()=>{
-    let [i,j]=el.dataset.rule.split(':').map(Number);
-    data.categories[i].rules[j][el.dataset.k]=el.value;send();
+    const [i,j]=el.dataset.rule.split(':').map(Number);
+    data.categories[i].rules[j][el.dataset.k]=el.value; sendPreview();
   });
-
   $$('[data-sub]').forEach(el=>el.oninput=()=>{
-    let [i,j]=el.dataset.sub.split(':').map(Number);
-    data.categories[i].subcategories[j][el.dataset.k]=el.value;send();
+    const [i,j]=el.dataset.sub.split(':').map(Number);
+    data.categories[i].subcategories[j][el.dataset.k]=el.value; sendPreview();
   });
-
   $$('[data-sub-rule]').forEach(el=>el.oninput=()=>{
-    let [i,j,k]=el.dataset.subRule.split(':').map(Number);
-    data.categories[i].subcategories[j].rules[k][el.dataset.k]=el.value;send();
+    const [i,j,k]=el.dataset.subRule.split(':').map(Number);
+    data.categories[i].subcategories[j].rules[k][el.dataset.k]=el.value; sendPreview();
+  });
+  $$('[data-upd]').forEach(el=>el.oninput=()=>{
+    data.updates[+el.dataset.upd][el.dataset.k]=el.value; sendPreview();
   });
 
-  $$('[data-upd]').forEach(el=>el.oninput=()=>{data.updates[+el.dataset.upd][el.dataset.k]=el.value;send()});
-
-  $$('[data-del-cat]').forEach(b=>b.onclick=()=>{data.categories.splice(+b.dataset.delCat,1);renderRules();send()});
-
-  $$('[data-del-rule]').forEach(b=>b.onclick=()=>{let [i,j]=b.dataset.delRule.split(':').map(Number);data.categories[i].rules.splice(j,1);renderRules();send()});
-
-  $$('[data-del-sub]').forEach(b=>b.onclick=()=>{let [i,j]=b.dataset.delSub.split(':').map(Number);data.categories[i].subcategories.splice(j,1);renderRules();send()});
-
-  $$('[data-del-sub-rule]').forEach(b=>b.onclick=()=>{let [i,j,k]=b.dataset.delSubRule.split(':').map(Number);data.categories[i].subcategories[j].rules.splice(k,1);renderRules();send()});
-
-  $$('[data-del-upd]').forEach(b=>b.onclick=()=>{data.updates.splice(+b.dataset.delUpd,1);renderRules();send()});
+  $$('[data-del-cat]').forEach(b=>b.onclick=()=>{
+    if(confirm('Excluir esta categoria?')){
+      data.categories.splice(+b.dataset.delCat,1); renderRules(); bindEditor(); sendPreview();
+    }
+  });
+  $$('[data-del-rule]').forEach(b=>b.onclick=()=>{
+    const [i,j]=b.dataset.delRule.split(':').map(Number);
+    data.categories[i].rules.splice(j,1); renderRules(); bindEditor(); sendPreview();
+  });
+  $$('[data-del-sub]').forEach(b=>b.onclick=()=>{
+    const [i,j]=b.dataset.delSub.split(':').map(Number);
+    data.categories[i].subcategories.splice(j,1); renderRules(); bindEditor(); sendPreview();
+  });
+  $$('[data-del-sub-rule]').forEach(b=>b.onclick=()=>{
+    const [i,j,k]=b.dataset.delSubRule.split(':').map(Number);
+    data.categories[i].subcategories[j].rules.splice(k,1); renderRules(); bindEditor(); sendPreview();
+  });
+  $$('[data-del-upd]').forEach(b=>b.onclick=()=>{
+    data.updates.splice(+b.dataset.delUpd,1); renderRules(); bindEditor(); sendPreview();
+  });
 
   $$('[data-add-rule]').forEach(b=>b.onclick=()=>{
-    let i=+b.dataset.addRule;
-    data.categories[i].rules=data.categories[i].rules||[];
+    const i=+b.dataset.addRule;
     data.categories[i].rules.push({code:'',title:'',text:'',tag:'REGRA',image:''});
-    renderRules();send();
+    renderRules(); bindEditor(); sendPreview();
   });
-
   $$('[data-add-sub]').forEach(b=>b.onclick=()=>{
-    let i=+b.dataset.addSub;
-    data.categories[i].subcategories=data.categories[i].subcategories||[];
+    const i=+b.dataset.addSub;
     data.categories[i].subcategories.push({id:'',name:'',icon:'◈',rules:[]});
-    renderRules();send();
+    renderRules(); bindEditor(); sendPreview();
   });
-
   $$('[data-add-sub-rule]').forEach(b=>b.onclick=()=>{
-    let [i,j]=b.dataset.addSubRule.split(':').map(Number);
-    data.categories[i].subcategories[j].rules=data.categories[i].subcategories[j].rules||[];
+    const [i,j]=b.dataset.addSubRule.split(':').map(Number);
     data.categories[i].subcategories[j].rules.push({code:'',title:'',text:'',tag:'REGRA',image:''});
-    renderRules();send();
+    renderRules(); bindEditor(); sendPreview();
   });
 }
-function send(){const f=$('#preview');if(f?.contentWindow)f.contentWindow.postMessage({type:'viena-preview',site,data},'*');}
-function notice(t){let n=$('#notice');n.textContent=t;n.classList.add('show');clearTimeout(window.nt);window.nt=setTimeout(()=>n.classList.remove('show'),1800)}
-function download(name,obj){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-$$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.remove('active'));$$('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');$('#panel-'+b.dataset.tab).classList.add('active')});
-$('#preview').addEventListener('load',send);$('#loadBtn').onclick=()=>load();$('#draftBtn').onclick=()=>{localStorage.setItem('viena-editor-draft',JSON.stringify({site,data}));notice('Rascunho salvo neste navegador.');};$('#downloadBtn').onclick=()=>{download('site.json',site);download('rules.json',data);notice('2 JSONs baixados.');};$('#adminBtn').onclick=()=>location.href='admin/';
+
+function sendPreview(){
+  const f=$('#preview');
+  if(f?.contentWindow){
+    f.contentWindow.postMessage({type:'viena-preview',site,data},location.origin);
+  }
+}
+
+function saveDraft(){
+  localStorage.setItem('viena-editor-draft',JSON.stringify({site,data,savedAt:new Date().toISOString()}));
+  toast('Rascunho salvo neste navegador.','ok');
+}
+
+function authUrl(){
+  const p=new URLSearchParams({provider:'github',site_id:location.hostname});
+  return `${AUTH_BASE}/auth?${p.toString()}`;
+}
+
+function login(){
+  oauthWindow=window.open(authUrl(),'viena-oauth','width=650,height=720');
+  if(!oauthWindow){
+    toast('O navegador bloqueou a janela de login. Libere pop-ups para este site.','error');
+    return;
+  }
+  toast('Conclua o login na janela do GitHub.');
+}
+
+window.addEventListener('message', async event=>{
+  if(event.origin !== new URL(AUTH_BASE).origin) return;
+  const msg=event.data;
+
+  if(msg==='authorizing:github'){
+    event.source?.postMessage('authorizing:github',event.origin);
+    return;
+  }
+
+  if(typeof msg==='string' && msg.startsWith('authorization:github:')){
+    const prefix='authorization:github:';
+    const rest=msg.slice(prefix.length);
+    const idx=rest.indexOf(':');
+    const state=idx>=0?rest.slice(0,idx):'error';
+    const payloadText=idx>=0?rest.slice(idx+1):'{}';
+
+    let payload={};
+    try{payload=JSON.parse(payloadText)}catch{}
+
+    if(state==='success' && payload.token){
+      githubToken=payload.token;
+      sessionStorage.setItem('viena-gh-token',githubToken);
+      oauthWindow?.close();
+      await loadGitHubUser();
+      toast('GitHub conectado. Você já pode publicar.','ok');
+    }else{
+      toast('Falha no login: '+(payload.error||'erro desconhecido'),'error');
+    }
+  }
+});
+
+async function gh(path, options={}){
+  if(!githubToken) throw new Error('Entre com GitHub primeiro.');
+  const res=await fetch('https://api.github.com'+path,{
+    ...options,
+    headers:{
+      'Accept':'application/vnd.github+json',
+      'Authorization':'Bearer '+githubToken,
+      'X-GitHub-Api-Version':'2022-11-28',
+      ...(options.headers||{})
+    }
+  });
+
+  if(res.status===401){
+    logout(false);
+    throw new Error('Sua sessão do GitHub expirou. Entre novamente.');
+  }
+
+  let body=null;
+  try{body=await res.json()}catch{}
+  if(!res.ok){
+    const msg=body?.message || `GitHub respondeu ${res.status}`;
+    throw new Error(msg);
+  }
+  return body;
+}
+
+async function loadGitHubUser(){
+  if(!githubToken){ updateAuthUI(); return; }
+  try{
+    githubUser=await gh('/user');
+    updateAuthUI();
+  }catch(err){
+    githubUser=null;
+    updateAuthUI();
+    if(githubToken) toast(err.message,'error');
+  }
+}
+
+function updateAuthUI(){
+  const box=$('#authStatus'), text=$('#authText'), avatar=$('#userAvatar'), btn=$('#loginBtn');
+  if(githubToken && githubUser){
+    box.className='status ok';
+    text.textContent=githubUser.login;
+    avatar.src=githubUser.avatar_url||'';
+    avatar.style.display=githubUser.avatar_url?'block':'none';
+    btn.textContent='Sair';
+    btn.onclick=()=>logout();
+  }else{
+    box.className='status warn';
+    text.textContent='Não conectado';
+    avatar.style.display='none';
+    btn.textContent='Entrar com GitHub';
+    btn.onclick=login;
+  }
+}
+
+function logout(show=true){
+  githubToken='';
+  githubUser=null;
+  sessionStorage.removeItem('viena-gh-token');
+  updateAuthUI();
+  if(show) toast('Sessão do editor encerrada.');
+}
+
+function utf8ToBase64(text){
+  const bytes=new TextEncoder().encode(text);
+  let binary='';
+  const chunk=0x8000;
+  for(let i=0;i<bytes.length;i+=chunk){
+    binary += String.fromCharCode(...bytes.subarray(i,Math.min(i+chunk,bytes.length)));
+  }
+  return btoa(binary);
+}
+
+async function getRemoteFile(path){
+  return await gh(`/repos/${REPO}/contents/${encodeURIComponent(path).replace(/%2F/g,'/')}?ref=${encodeURIComponent(BRANCH)}`);
+}
+
+async function putRemoteFile(path,obj,sha,message){
+  const content=JSON.stringify(obj,null,2)+'\n';
+  return await gh(`/repos/${REPO}/contents/${encodeURIComponent(path).replace(/%2F/g,'/')}`,{
+    method:'PUT',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      message,
+      content:utf8ToBase64(content),
+      sha,
+      branch:BRANCH
+    })
+  });
+}
+
+async function publish(){
+  if(!githubToken){
+    login();
+    return;
+  }
+
+  const btn=$('#publishBtn');
+  const old=btn.textContent;
+  btn.disabled=true;
+  btn.textContent='PUBLICANDO...';
+
+  try{
+    if(!confirm('Publicar estas alterações no site da Viena?')) return;
+
+    // Busca os SHAs mais recentes para evitar sobrescrever uma versão antiga sem perceber.
+    const [siteRemote,rulesRemote]=await Promise.all([
+      getRemoteFile(SITE_PATH),
+      getRemoteFile(RULES_PATH)
+    ]);
+
+    const stamp=new Date().toLocaleString('pt-BR');
+    await putRemoteFile(SITE_PATH,site,siteRemote.sha,`Editor Visual: atualizar site (${stamp})`);
+    await putRemoteFile(RULES_PATH,data,rulesRemote.sha,`Editor Visual: atualizar regras (${stamp})`);
+
+    localStorage.removeItem('viena-editor-draft');
+    toast('Publicado! O GitHub Pages pode levar alguns segundos para atualizar.','ok');
+  }catch(err){
+    console.error(err);
+    let msg=err.message||'Erro ao publicar.';
+    if(/403|Resource not accessible|permission|Forbidden/i.test(msg)){
+      msg='Sua conta entrou no editor, mas não tem permissão de escrita nesse repositório.';
+    }
+    toast(msg,'error');
+  }finally{
+    btn.disabled=false;
+    btn.textContent=old;
+  }
+}
+
+$$('.tab').forEach(b=>{
+  b.onclick=()=>{
+    $$('.tab').forEach(x=>x.classList.remove('active'));
+    $$('.panel').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    $('#panel-'+b.dataset.tab).classList.add('active');
+  };
+});
+
+$('#preview').addEventListener('load',sendPreview);
+$('#reloadBtn').onclick=()=>{
+  if(confirm('Recarregar do GitHub e ignorar o rascunho local?')){
+    localStorage.removeItem('viena-editor-draft');
+    load(true);
+  }
+};
+$('#draftBtn').onclick=saveDraft;
+$('#adminBtn').onclick=()=>location.href='admin/';
+$('#publishBtn').onclick=publish;
+$('#loginBtn').onclick=login;
+
+updateAuthUI();
+loadGitHubUser();
 load();
-</script></body></html>
+</script>
+</body>
+</html>
