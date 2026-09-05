@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: alaska-ui/viena-regras1
+  repo: vienarp/vienarp.github.io
   branch: main
+  base_url: https://sveltia-cms-auth.bab-amorim13.workers.dev
 
 media_folder: uploads
 public_folder: uploads
