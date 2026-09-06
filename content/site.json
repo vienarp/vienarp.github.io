@@ -1,18 +1,4 @@
 {
-  "site_name": "Viena Roleplay",
-  "site_title": "Código da Rua",
-  "tagline": "Quem vive Viena faz história.",
-  "description": "Central oficial de regras da Viena Roleplay.",
-  "logo": "logo-viena.png",
-  "favicon": "logo-viena.png",
-  "discord_url": "https://discord.com/invite/vienarp",
-  "hero_eyebrow": "CENTRAL OFICIAL DE REGRAS",
-  "hero_title": "O CÓDIGO DA RUA.",
-  "hero_text": "As regras que mantêm Viena viva. Leia, entenda e faça parte da história.",
-  "hero_image": "/uploads/ChatGPT Image 19 de ago. de 2026, 12_54_58.png",
-  "notice_title": "LEIA ANTES DE JOGAR",
-  "notice_text": "Desconhecer uma regra não isenta o jogador de sua responsabilidade.",
-  "footer_text": "© 2026 Viena Roleplay · Todos os direitos reservados.",
   "theme": {
     "accent": "#E50914",
     "accent_light": "#FF3344",
@@ -30,10 +16,32 @@
   },
   "cursor": {
     "enabled": true,
-    "image": "/uploads/SPRAY PNG.png",
     "size": 30,
     "trail_enabled": true,
+    "trail_type": "paint",
     "trail_color": "#e60a0a",
-    "trail_count": 30
-  }
+    "trail_count": 30,
+    "falling_particles": {
+      "enabled": true,
+      "type": "letters",
+      "color": "#c50000",
+      "count": 34,
+      "size": 14
+    },
+    "image": "/uploads/SPRAY PNG.png"
+  },
+  "site_name": "Viena Roleplay TESTE",
+  "site_title": "Código da Rua",
+  "tagline": "Quem vive Viena faz história.",
+  "description": "Central oficial de regras da Viena Roleplay.",
+  "logo": "logo-viena.png",
+  "favicon": "logo-viena.png",
+  "discord_url": "https://discord.com/invite/vienarp",
+  "hero_eyebrow": "CENTRAL OFICIAL DE REGRAS",
+  "hero_title": "O CÓDIGO DA RUA.",
+  "hero_text": "As regras que mantêm Viena viva. Leia, entenda e faça parte da história.",
+  "hero_image": "/uploads/ChatGPT Image 19 de ago. de 2026, 12_54_58.png",
+  "notice_title": "LEIA ANTES DE JOGAR",
+  "notice_text": "Desconhecer uma regra não isenta o jogador de sua responsabilidade.",
+  "footer_text": "© 2026 Viena Roleplay · Todos os direitos reservados."
 }
