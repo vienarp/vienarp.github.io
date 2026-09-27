@@ -11,25 +11,16 @@
 <body>
   <div class="noise"></div>
   <div class="falling-letters" id="fallingLetters" aria-hidden="true"></div>
-
   <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
 
   <header class="topbar">
     <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menu">☰</button>
-
     <a class="brand" href="#inicio" data-route="inicio">
       <img id="headerLogo" src="logo-viena.png" alt="Viena Roleplay">
-      <div>
-        <strong id="brandTitle">CÓDIGO DA RUA</strong>
-        <small id="brandSite">VIENA ROLEPLAY</small>
-      </div>
+      <div><strong id="brandTitle">CÓDIGO DA RUA</strong><small id="brandSite">VIENA ROLEPLAY</small></div>
     </a>
-
     <div class="top-actions">
-      <button id="searchOpen" class="icon-btn search-button" type="button" aria-label="Pesquisar" title="Pesquisar regras">
-        <span class="search-symbol">⌕</span>
-        <span class="search-label">PESQUISAR</span>
-      </button>
+      <button id="searchOpen" class="icon-btn search-button" type="button" aria-label="Pesquisar" title="Pesquisar regras"><span class="search-symbol">⌕</span><span class="search-label">PESQUISAR</span></button>
       <a id="discordBtn" href="#" class="discord-btn" target="_blank" rel="noopener noreferrer">DISCORD</a>
     </div>
   </header>
@@ -42,126 +33,35 @@
 
   <main class="content">
     <section id="inicio" class="page active">
-      <div class="hero" id="hero">
-        <div class="hero-copy">
-          <p class="eyebrow" id="heroEyebrow"></p>
-          <h1 id="heroTitle"></h1>
-          <p class="hero-text" id="heroText"></p>
-
-          <div class="hero-actions">
-            <button class="primary" id="exploreButton" data-route="corridas" type="button">
-              EXPLORAR CORRIDAS <span>→</span>
-            </button>
-            <button class="ghost" data-route="inicio" type="button" id="allRulesButton">
-              VER TODAS AS REGRAS
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="notice" id="notice">
-        <div class="notice-icon">!</div>
-        <div>
-          <strong id="noticeTitle"></strong>
-          <p id="noticeText"></p>
-        </div>
-      </div>
-
-      <div class="section-head">
-        <div>
-          <span>01</span>
-          <h2>MAPA DA RUA</h2>
-        </div>
-        <p>Escolha uma categoria para começar.</p>
-      </div>
-
+      <div class="hero" id="hero"><div class="hero-copy">
+        <p class="eyebrow" id="heroEyebrow"></p><h1 id="heroTitle"></h1><p class="hero-text" id="heroText"></p>
+        <div class="hero-actions"><button class="primary" id="exploreButton" data-route="corridas" type="button">EXPLORAR CORRIDAS <span>→</span></button><button class="ghost" data-route="inicio" type="button" id="allRulesButton">VER TODAS AS REGRAS</button></div>
+      </div></div>
+      <div class="notice" id="notice"><div class="notice-icon">!</div><div><strong id="noticeTitle"></strong><p id="noticeText"></p></div></div>
+      <div class="section-head"><div><span>01</span><h2>MAPA DA RUA</h2></div><p>Escolha uma categoria para começar.</p></div>
       <div class="category-grid" id="homeCategories"></div>
-
-      <div class="updates" id="updatesWrap">
-        <div class="section-head">
-          <div>
-            <span>02</span>
-            <h2>ÚLTIMAS ALTERAÇÕES</h2>
-          </div>
-        </div>
-        <div id="updatesList"></div>
-      </div>
+      <div class="updates" id="updatesWrap"><div class="section-head"><div><span>02</span><h2>ÚLTIMAS ALTERAÇÕES</h2></div></div><div id="updatesList"></div></div>
     </section>
 
     <section id="categoryPage" class="page">
       <button class="back" data-route="inicio" type="button">← VOLTAR AO MAPA</button>
-
-      <div class="category-title" id="categoryHero">
-        <div class="category-title-content">
-          <p class="eyebrow" id="catCode"></p>
-          <h1 id="catTitle"></h1>
-          <p id="catDesc"></p>
-        </div>
-      </div>
-
-      <div class="rule-layout">
-        <div class="rule-list" id="ruleList"></div>
-        <aside class="rule-toc" id="ruleToc"></aside>
-      </div>
-
+      <div class="category-title" id="categoryHero"><div class="category-title-content"><p class="eyebrow" id="catCode"></p><h1 id="catTitle"></h1><p id="catDesc"></p></div></div>
+      <div class="rule-layout"><div class="rule-list" id="ruleList"></div><aside class="rule-toc" id="ruleToc"></aside></div>
       <div class="category-navigation" id="categoryNavigation"></div>
     </section>
 
     <section id="searchPage" class="page">
       <button class="back" data-route="inicio" type="button">← VOLTAR</button>
-
-      <div class="category-title search-title">
-        <p class="eyebrow">PESQUISA</p>
-        <h1>ENCONTRE A REGRA.</h1>
-        <input id="searchInput" class="big-search"
-               placeholder="Digite: RDM, PIT, corrida, aposta..."
-               autocomplete="off">
-      </div>
-
+      <div class="category-title search-title"><p class="eyebrow">PESQUISA</p><h1>ENCONTRE A REGRA.</h1><input id="searchInput" class="big-search" placeholder="Digite: RDM, PIT, corrida, aposta..." autocomplete="off"></div>
       <div id="searchResults" class="search-results"></div>
     </section>
   </main>
 
   <footer id="footerText"></footer>
+  <div class="search-overlay" id="searchOverlay"><div class="search-modal"><button id="searchClose" type="button" aria-label="Fechar">×</button><p class="eyebrow">PESQUISA RÁPIDA</p><h2>QUAL REGRA VOCÊ PROCURA?</h2><input id="overlaySearch" placeholder="Ex.: VDM, metagaming, PIT..." autocomplete="off"><div id="overlayResults"></div></div></div>
 
-  <div class="search-overlay" id="searchOverlay">
-    <div class="search-modal">
-      <button id="searchClose" type="button" aria-label="Fechar">×</button>
-      <p class="eyebrow">PESQUISA RÁPIDA</p>
-      <h2>QUAL REGRA VOCÊ PROCURA?</h2>
-      <input id="overlaySearch" placeholder="Ex.: VDM, metagaming, PIT..." autocomplete="off">
-      <div id="overlayResults"></div>
-    </div>
-  </div>
-
-  <!--
-    O arquivo mestre das regras agora é /rules.json.
-    Mantemos app.js intacto e redirecionamos apenas a leitura antiga
-    de content/rules.json para o arquivo correto.
-  -->
-  <script>
-    (() => {
-      const originalFetch = window.fetch.bind(window);
-
-      window.fetch = (input, init) => {
-        const url =
-          typeof input === "string"
-            ? input
-            : (input && input.url) || "";
-
-        if (
-          url === "./content/rules.json" ||
-          url === "content/rules.json" ||
-          /\/content\/rules\.json(?:\?|$)/.test(url)
-        ) {
-          return originalFetch("./rules.json", init);
-        }
-
-        return originalFetch(input, init);
-      };
-    })();
-  </script>
-
+  <!-- Carrega a base atual e aplica apenas as atualizações adicionais. -->
+  <script src="rules-loader.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
