@@ -1,0 +1,90 @@
+{
+  "replaceByCode": {
+    "05.11": {
+      "title": "Drop Policial",
+      "text": "O drop contra policiais somente poderá ocorrer **3 minutos após a voz de parada** e deverá possuir contexto de RP. O confronto não pode ser iniciado apenas para forçar PVP.\n\n**Desce e quebra:** caso o drop seja realizado nessa modalidade, o primeiro disparo deverá partir do **P1 do veículo em fuga**.\n\n**Participação e QRR:** somente os envolvidos originalmente na ocorrência podem participar do início. Apoio criminoso deverá chegar posteriormente e o QRR somente poderá ser solicitado **após o primeiro disparo**. Pela polícia, o início fica restrito aos oficiais da primária, secundária e terciária; QRR adicional somente após o primeiro disparo.\n\n> ❌ **PROIBIDO**\n> Drop em **caixinhas**, **fugas limpas** e qualquer forma de **Copbait** para preparar ou provocar o confronto.\n\n> ⚠️ **ATENÇÃO**\n> Os 3 minutos são contados a partir da voz de parada, sem anular as demais regras de abordagem e confronto.",
+      "tag": "POLÍCIA"
+    },
+    "08.01": {
+      "title": "Abordagem de Rotina",
+      "text": "A polícia possui permissão para realizar abordagens de rotina **com ou sem suspeita prévia**, porém o procedimento permitido depende do que for constatado.\n\n- Uso de **coldre, máscara ou insulfilm** permite revista dos indivíduos e verificação do porta-malas.\n- Sem qualquer item ou indício visível fora da lei, a polícia poderá verificar documentação do veículo e do motorista e realizar perguntas relacionadas à abordagem.\n- Caso o cidadão fuja, passam a valer as regras de **Fuga Limpa**.",
+      "tag": "POLÍCIA"
+    },
+    "08.04": {
+      "title": "Fugas Limpas",
+      "text": "Considera-se **Fuga Limpa** aquela que não envolve disparos nem suspeita de disparos. Esta regra não se aplica às corridas ilegais, que possuem tempo próprio.\n\n**Código 3:** poderá ser liberado após **5 minutos de acompanhamento**, contados da abordagem primária. Depois disso, deverá existir intervalo mínimo de **1 minuto entre cada pneu furado**, totalizando no mínimo **8 minutos de fuga** até que os quatro pneus possam ser furados.\n\n**Código 5:** após os quatro pneus serem furados, deverá ser aguardado **mais 1 minuto**. Respeitando a progressão, o Código 5 ocorrerá somente após **no mínimo 9 minutos de ocorrência**.\n\nApós o abatimento, o indivíduo deverá receber socorro médico, ser encaminhado ao Departamento de Polícia e então passar pelo procedimento de prisão.\n\n> ⚠️ **ATENÇÃO**\n> É proibido retirar itens ilegais fora do Departamento de Polícia; o procedimento deverá ocorrer no local das celas.\n\n> ⚠️ **OBRIGATÓRIO**\n> A **Lei de Miranda** deverá ser informada ao cidadão conduzido antes de sua entrada na DP.",
+      "tag": "POLÍCIA"
+    },
+    "08.07": {
+      "title": "Veículo Inutilizado",
+      "text": "Danos graves, capotamentos ou colisões que tornariam um veículo incapaz de continuar em uma situação real devem ser respeitados dentro do RP.\n\n> ⚠️ **ATENÇÃO**\n> Continuar utilizando normalmente um veículo após dano evidentemente incapacitante poderá ser considerado **Power Gaming**, podendo gerar consequências dentro do RP e punições administrativas.",
+      "tag": "VEÍCULOS"
+    },
+    "08.10": {
+      "title": "Operações contra Corridas",
+      "text": "A polícia poderá planejar operações para interromper eventos clandestinos, realizar cercos, identificar participantes e organizadores e apreender veículos, desde que exista contexto de RP.\n\n> ℹ️ **OBSERVAÇÃO**\n> Nas corridas ilegais, o tempo específico de perseguição e liberação de códigos é definido pelas regras do **Código Vermelho**.",
+      "tag": "OPERAÇÃO"
+    },
+    "08.11": {
+      "title": "Airdrop — Intervenção Policial",
+      "text": "A polícia somente poderá atuar diretamente no **Airdrop quando houver disparos dentro da área da ação**, respeitando o contexto da ocorrência.\n\n> ❌ **A POLÍCIA NÃO PODE**\n> - Permanecer camperando o local apenas aguardando disparos;\n> - Abordar um cidadão exclusivamente por ele ter acabado de lootear a caixa;\n> - Utilizar a queda do Airdrop, isoladamente, como justificativa para abordagem ou operação.\n\n> ⚠️ **ATENÇÃO**\n> Sem disparos dentro da área, a presença ou o loot do Airdrop não constituem, por si só, autorização para intervenção policial.",
+      "tag": "POLÍCIA"
+    },
+    "10.10": {
+      "title": "Polícia e Perseguição em Corridas",
+      "text": "Em fugas decorrentes de **corridas ilegais**, deverá ser respeitado o período mínimo de **10 minutos antes da liberação de qualquer código**. A exceção ocorre em situações graves de **Power Gaming**.\n\nA polícia poderá realizar operações previamente planejadas para interromper eventos clandestinos, cercar áreas, identificar organizadores e apreender veículos conforme o contexto do RP.\n\n> ❌ **PROIBIDO**\n> Não é permitido realizar **drop durante corridas ilegais**.",
+      "tag": "HEAT"
+    }
+  },
+  "addSubcategories": {
+    "policia": [
+      {
+        "id": "prisoes-conducao",
+        "name": "Prisões & Condução",
+        "icon": "🚨",
+        "rules": [
+          {
+            "code": "08.12",
+            "title": "Prisões após Ações de Rua",
+            "text": "A polícia poderá realizar prisão após **ações de rua**, com ou sem disparos. A prisão não é obrigatória para todas as unidades, ressalvadas as regras específicas da unidade Civil.\n\n**Procedimento:**\n1. Recolher os corpos após o fim da ação;\n2. Acionar os bombeiros e prestar o socorro necessário;\n3. Encaminhar os envolvidos à DP;\n4. Realizar o procedimento de prisão.\n\n> ❌ **PROIBIDO — RETORNO POR GG/E**\n> A partir do momento em que os corpos começarem a ser recolhidos para atendimento, hospital ou condução, os criminosos abatidos **não poderão retornar utilizando GG/E**, mesmo que o tempo de respawn já tenha terminado. O descumprimento poderá ser tratado como **Combat Logging (CL)**.\n\n> ℹ️ **OBSERVAÇÃO**\n> Até o encerramento da ação, aplicam-se as regras gerais de retorno. Em corridas, se o indivíduo morrer por consequência de seus próprios atos, os procedimentos policiais de socorro e prisão poderão continuar normalmente.",
+            "tag": "POLÍCIA"
+          }
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "id": "sequestro-faccao-faccao",
+        "name": "Sequestro — Facção × Facção",
+        "icon": "🔻",
+        "rules": [
+          {
+            "code": "06.05",
+            "title": "Sequestro — Facção × Facção",
+            "text": "A ação deverá possuir entre **6 e 10 sequestradores**. O grupo de resgate deverá ter entre **7 e 11 integrantes** e poderá possuir, no máximo, **1 integrante a mais** que o grupo sequestrador. Se a facção não possuir efetivo mínimo para o resgate, poderá solicitar intervenção policial, passando a ação a seguir as regras de **Facção × Polícia**.\n\n**Condições gerais:**\n- Armamento livre, respeitando coerência e RP;\n- Máximo de **3 reféns**, todos pertencentes à mesma facção;\n- A integridade e a vida dos reféns devem ser priorizadas;\n- Loot proporcional ao número de sequestradores sobreviventes;\n- É proibido utilizar GG/E antes do encerramento oficial;\n- Após o início, nenhum dos lados poderá adicionar novos participantes;\n- Reféns podem ser capturados pelo mapa, exceto em **Safe Zones**;\n- O anúncio só ocorre após o grupo estar posicionado e pronto para a ação;\n- A negociação não poderá ser interrompida ou quebrada;\n- Tortura física ou psicológica e práticas de Dark RP são proibidas;\n- Atendimento médico somente após o encerramento completo;\n- O confronto final não é obrigatório: o resgate poderá ser pago;\n- Áreas de facções não podem ser utilizadas como local da ação;\n- Cada facção pode realizar **1 sequestro a cada 24 horas**;\n- A mesma facção não poderá ser vítima novamente por **5 dias**;\n- Helicópteros e snipers não podem ser utilizados;\n- É proibido solicitar apoio de facções aliadas.\n\n**Limites de resgate:**\n- **Líder:** até R$ 1.500.000 limpo;\n- **Gerente:** até R$ 1.000.000 limpo;\n- **Membro:** até R$ 600.000 limpo.\n\nA negociação pode envolver dinheiro, itens ou favores dentro dos limites correspondentes.\n\n> ❌ **PROIBIDO**\n> Cobrar acima do limite, exigir pagamento OOC, forçar a morte do refém para justificar valor ou abusar da economia durante a negociação.",
+            "tag": "SEQUESTRO"
+          }
+        ]
+      },
+      {
+        "id": "sequestro-policia-faccao",
+        "name": "Sequestro — Polícia × Facção",
+        "icon": "🚔",
+        "rules": [
+          {
+            "code": "06.06",
+            "title": "Sequestro — Polícia × Facção",
+            "text": "A ação exige **mínimo de 4 policiais em serviço** e **mínimo de 3 criminosos**. A polícia deverá priorizar a preservação da vida do refém durante toda a negociação.\n\n**Condições gerais:**\n- Armamento livre, respeitando equilíbrio e RP;\n- Loot proporcional ao número de criminosos sobreviventes; jogadores ressuscitados não contam como ativos para o loot;\n- Após o início, é proibida a entrada de novos participantes;\n- A polícia poderá possuir, no máximo, **5 integrantes a mais** que o grupo criminoso;\n- Acordos realizados durante a negociação devem ser respeitados;\n- Máximo de **3 reféns**;\n- Cada facção poderá realizar **1 sequestro a cada 24 horas**;\n- A ação poderá ocorrer em qualquer horário.\n\n**Trocas durante a negociação:** a cada item ou condição concedida pela polícia, **1 refém deverá ser libertado**. Podem ser negociados até **R$ 300.000 limpo**, 2 distintivos, 1 colete, fuga de 1 criminoso, ausência de spikes, tempo de vantagem, retirada de 1 blindado ou retirada de helicópteros. Não é permitida negociação para retirada de energético em ações fechadas.\n\n**Limites de resgate por patente:**\n- **Comando Geral:** até R$ 2.000.000 limpo;\n- **Comando:** até R$ 1.500.000 limpo;\n- **Sub-Comando:** até R$ 1.000.000 limpo.\n\nSomente patentes de **Sub-Comando ou superiores** podem ser sequestradas. Policiais não realizam sequestro: em serviço, podem apreender um indivíduo para interrogatório, sem exigir recompensa pela pessoa apreendida.\n\n> ❌ **PROIBIDO**\n> Cobrar acima dos limites, exigir pagamento OOC, forçar a morte do refém para justificar valor, abusar da economia ou sequestrar patente inferior a Sub-Comando.",
+            "tag": "SEQUESTRO"
+          }
+        ]
+      }
+    ]
+  },
+  "update": {
+    "date": "27 SET 2026",
+    "title": "Polícia, Fugas & Sequestros",
+    "text": "Procedimentos de abordagem, fugas limpas, corridas, drop, prisões, Airdrop e regras de sequestro revisados.",
+    "tag": "REGRAS"
+  }
+}
