@@ -2,7 +2,7 @@ backend:
   name: github
   repo: vienarp/vienarp.github.io
   branch: main
-  base_url: https://sveltia-cms-auth.bab-amorim13.workers.dev
+  base_url: https://vienaregras.bab-amorim13.workers.dev
 
 media_folder: uploads
 public_folder: uploads
@@ -107,18 +107,15 @@ collections:
               - { name: short, label: "Nome curto", widget: string, required: false }
               - { name: desc, label: "Descrição", widget: text, required: false }
               - { name: image, label: "Imagem da categoria", widget: image, required: false }
-
               - name: subcategories
                 label: "📂 Subcategorias"
                 widget: list
                 required: false
                 summary: "{{icon}} {{name}}"
-                hint: "Use subcategorias para organizar as regras sem deixar o menu poluído."
                 fields:
-                  - { name: id, label: "ID da subcategoria", widget: string, required: false, hint: "Ex.: regras-basicas" }
+                  - { name: id, label: "ID da subcategoria", widget: string, required: false }
                   - { name: name, label: "Nome da subcategoria", widget: string, required: false }
-                  - { name: icon, label: "Ícone", widget: string, required: false, hint: "Pode usar emoji ou símbolo." }
-
+                  - { name: icon, label: "Ícone", widget: string, required: false }
                   - name: rules
                     label: "📌 Regras desta subcategoria"
                     widget: list
@@ -130,7 +127,6 @@ collections:
                       - { name: text, label: "Texto", widget: text, required: false }
                       - { name: tag, label: "Tag", widget: string, required: false, default: "REGRA" }
                       - { name: image, label: "Imagem (opcional)", widget: image, required: false }
-
               - name: rules
                 label: "📌 Regras diretas da categoria"
                 widget: list
@@ -142,7 +138,6 @@ collections:
                   - { name: text, label: "Texto", widget: text, required: false }
                   - { name: tag, label: "Tag", widget: string, required: false, default: "REGRA" }
                   - { name: image, label: "Imagem (opcional)", widget: image, required: false }
-
           - name: updates
             label: "📝 Últimas alterações"
             widget: list
