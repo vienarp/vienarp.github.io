@@ -587,6 +587,18 @@
               "text": "Participantes abatidos em ações organizadas devem respeitar o encerramento do cenário antes de utilizar recursos que retirem o personagem da situação, quando a modalidade da ação exigir permanência até o fim.\n\n> ℹ️ **OBSERVAÇÃO**\n> Regras específicas da ação prevalecem quando definirem condições próprias de encerramento.",
               "tag": "AÇÃO",
               "code": "06.02"
+            },
+            {
+              "title": "Uso de Escudos Balísticos em Ações Grandes",
+              "text": "Em ações de grande porte, a polícia poderá utilizar até 2 escudos balísticos, sendo permitido no máximo 2 policiais (um por escudo).\n\nCaso a facção deseje a remoção dos escudos, será obrigatório possuir refém ativo na ação, utilizando a negociação como meio para solicitar essa condição.\n\nA negociação deve ser feita dentro do RP, cabendo à polícia aceitar ou não conforme o desenvolvimento da situação.\n\n**Exemplo:**\n- ❌ Polícia utilizando mais de 2 escudos\n- ❌ Polícia utilizar escudo em ações de rua\n- ❌ Solicitar retirada de escudo sem possuir refém\n- ✅ Utilizar refém para negociar remoção de escudos\n- ✅ Respeitar limite de escudos por ação",
+              "tag": "AÇÃO",
+              "code": "06.03"
+            },
+            {
+              "title": "Uso de P2 (Nióbio) e Negociação",
+              "text": "O uso do P2 do Nióbio é liberado para a polícia em ações.\n\nÉ proibido solicitar ou negociar a retirada do P2 da ação, mesmo mediante negociação com refém. A existência ou quantidade de reféns não altera essa condição.\n\n**Exemplo:**\n- ❌ Solicitar remoção do P2 da ação\n- ❌ Utilizar refém para tentar negociar a retirada do P2\n- ❌ Utilizar múltiplos reféns como justificativa para retirar o P2\n- ✅ Utilizar o P2 do Nióbio pela polícia em ações\n\nO descumprimento será considerado quebra de regra de ação, passível de punição administrativa.",
+              "tag": "AÇÃO",
+              "code": "06.04"
             }
           ]
         },
@@ -596,7 +608,7 @@
           "icon": "🚗",
           "rules": [
             {
-              "code": "06.03",
+              "code": "06.05",
               "title": "Furto de Veículos",
               "text": "O furto de veículos deve acontecer de maneira coerente com o RP e **não pode ser utilizado como justificativa para iniciar um confronto de forma forçada**.\n\n**É permitido:**\n- Furtar veículos que estejam abandonados ou destrancados.\n- Realizar o furto sem utilização de violência.\n- Utilizar o veículo furtado dentro das limitações previstas pelas demais regras da cidade.\n\n**É proibido:**\n- Criar um RP forçado apenas para furtar um veículo.\n- Utilizar o furto como pretexto para iniciar um PVP.\n- Furtar veículos com o objetivo de utilizá-los em ações de rua quando houver proibição específica para esse tipo de veículo.\n\n> ⚠️ ATENÇÃO\n> Caso exista uma situação de “desce e quebra” sem construção de RP prévia, a situação poderá ser caracterizada como RDM.",
               "tag": "COMBATE"
@@ -612,7 +624,7 @@
               "title": "Ações com Regramento Próprio",
               "text": "Airdrop, Helicrash e outras ações especiais podem possuir **regras adicionais específicas** divulgadas pela Administração.\n\nQuando existir regra própria para uma ação, ela deve ser lida em conjunto com as regras gerais de combate, interferência, loot e atuação policial.\n\n> ⚠️ **ATENÇÃO**\n> Nenhuma ação especial anula RDM, VDM, Metagaming, Combat Logging ou demais regras fundamentais da cidade.",
               "tag": "AÇÃO",
-              "code": "06.04"
+              "code": "06.06"
             }
           ]
         }
