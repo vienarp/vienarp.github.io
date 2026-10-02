@@ -287,7 +287,7 @@
             {
               "code": "02.27",
               "title": "Assalto Fora de Horário",
-              "text": "Assaltos devem respeitar os horários definidos pela cidade.\n\n⏰ **HORÁRIOS PERMITIDOS**\n**SUL:** 02:00 às 10:00;\n**NORTE:** 18:00 às 02:00.\n\n> ⚠️ ATENÇÃO\n> Fora dos horários estabelecidos, a ação de assalto não poderá ser iniciada.",
+              "text": "Assaltos devem respeitar os horários e restrições definidos pela cidade.\n\n⛔ **SUL**\nAssaltos são completamente proibidos no Sul. Nessa região, é permitido apenas **sequestro**, respeitando as regras específicas dessa modalidade.\n\n⏰ **NORTE**\nAssaltos são permitidos das **18:00 às 02:00**.\n\n> ⚠️ **ATENÇÃO**\n> No Sul, a permissão para sequestro não autoriza assaltos. No Norte, ações de assalto somente poderão ser iniciadas dentro do horário estabelecido.",
               "tag": "AÇÕES"
             },
             {
@@ -339,7 +339,7 @@
             },
             {
               "title": "Personagens Secundários e Vínculos",
-              "text": "Personagens pertencentes ao mesmo jogador devem possuir histórias independentes.\n\n**É proibido:**\n- Compartilhar itens, dinheiro ou patrimônio entre personagens do mesmo jogador;\n- Criar parentesco apenas para justificar transferência de bens ou informações;\n- Utilizar conhecimento obtido por um personagem no outro;\n- Manter dois personagens setados em facções diferentes para obter vantagem;\n- Manter personagens em unidades policiais incompatíveis entre si.\n\n> ℹ️ **OBSERVAÇÃO**\n> Integrantes de unidades investigativas da polícia não podem utilizar personagem secundário setado em facção ilegal, salvo autorização administrativa específica.",
+              "text": "Personagens pertencentes ao mesmo jogador devem possuir histórias independentes.\n\n**É proibido:**\n- Compartilhar itens, dinheiro, patrimônio ou informações entre personagens do mesmo jogador;\n- Criar parentesco apenas para justificar transferência de bens ou informações;\n- Utilizar conhecimento obtido por um personagem no outro;\n- Manter dois personagens ativos em lados conflitantes para obter vantagem;\n- Manter simultaneamente personagem atuando no **ilegal** e outro na **polícia**, salvo autorização administrativa específica;\n- Manter personagens em unidades policiais incompatíveis entre si.\n\n> ⚠️ **ATENÇÃO**\n> Conhecimento, contatos, investigações e informações obtidas por um personagem não podem ser transportados para outro. O descumprimento poderá ser tratado como **Metagaming e vantagem indevida**.",
               "tag": "PERSONAGEM",
               "code": "03.05"
             }
@@ -426,7 +426,7 @@
           "rules": [
             {
               "title": "Territórios e Áreas de Risco",
-              "text": "Sedes, favelas, farms e demais áreas controladas por organizações podem possuir risco elevado, mas isso não autoriza ações sem contexto ou quebra das demais regras.\n\n**Não é permitido:**\n- Permanecer escondido apenas aguardando vítimas;\n- Utilizar a área como justificativa automática para RDM;\n- Criar conflitos aleatórios sem construção de RP.\n\n> ℹ️ **OBSERVAÇÃO**\n> Área de risco não significa ausência de regras.",
+              "text": "Sedes, favelas, farms e demais áreas controladas por organizações são **áreas de risco**, mas não são áreas sem regras.\n\n**Não é permitido:**\n- Permanecer escondido apenas aguardando vítimas ou emboscadas;\n- Camperar sedes ou locais de farm;\n- Utilizar a área como justificativa automática para RDM;\n- Criar conflitos aleatórios sem construção de RP;\n- Utilizar comunidade, sede, morro ou território de facção como rota imediata de fuga para escapar de perseguição ou confronto.\n\nDurante fuga, o jogador deverá primeiro romper efetivamente o acompanhamento. O retorno a território de facção somente poderá ocorrer após **10 minutos**, desde que tenha certeza de que não está sendo seguido e não conduza terceiros ou a polícia até o local.\n\n> ℹ️ **OBSERVAÇÃO**\n> Área de risco não significa ausência de regras. Levar deliberadamente uma perseguição até território sensível poderá gerar punição individual e, conforme o contexto, consequências para a organização.",
               "tag": "FACÇÃO",
               "code": "04.03"
             }
@@ -597,13 +597,13 @@
             {
               "code": "06.05",
               "title": "Posicionamento e Acessos",
-              "text": "Durante ações fechadas:\n- É proibido acessar o interior de residências.\n- É proibido conduzir a ação para áreas de empregos legais, como a Central de Taxistas ou locais similares.\n- É proibida a movimentação ou troca de posicionamento utilizando veículos.\n- A utilização do helicóptero da Polícia permanece permitida quando prevista para a modalidade.\n- É proibido bloquear acessos ou entradas de qualquer local.\n- É proibido fugir para locais que possuam apenas uma única entrada ou saída.",
+              "text": "Durante ações fechadas:\n- É proibido acessar o interior de residências.\n- É proibido conduzir a ação para áreas de empregos legais, como a Central de Taxistas ou locais similares.\n- É proibida a movimentação ou troca de posicionamento utilizando veículos.\n- A utilização do helicóptero da Polícia permanece permitida quando prevista para a modalidade.\n- É proibido bloquear acessos ou entradas de qualquer local.\n- É proibido fugir para locais que possuam apenas uma única entrada ou saída.\n\n> ⚠️ **EXCEÇÃO**\n> Exceto ordens ou missões da cúpula.",
               "tag": "AÇÃO"
             },
             {
               "code": "06.06",
               "title": "Marcação do Drop da Polícia",
-              "text": "É proibido marcar, camperar ou utilizar como ponto de vantagem o local de **drop/entrada da Polícia** em ações fechadas.\n\n**Exemplos:**\n- Escada ou elevador do Nióbio;\n- Lustre do Banco Central;\n- Outros pontos equivalentes utilizados para entrada/drop policial.\n\n> ❌ **PROIBIDO**\n> Posicionar-se com o objetivo de eliminar policiais no exato ponto em que realizam a entrada/drop da ação.",
+              "text": "É proibido marcar, camperar ou utilizar como ponto de vantagem o local de **drop/entrada da Polícia** em ações fechadas.\n\n**Exemplos:**\n- Escada ou elevador do Nióbio;\n- Lustre do Banco Central;\n- Outros pontos equivalentes utilizados para entrada/drop policial.\n\n> ❌ **PROIBIDO**\n> Posicionar-se com o objetivo de eliminar policiais no exato ponto em que realizam a entrada/drop da ação.\n\n> ⚠️ **EXCEÇÃO**\n> Exceto ordens ou missões da cúpula.",
               "tag": "AÇÃO"
             }
           ]
@@ -696,6 +696,43 @@
               "tag": "AÇÃO"
             }
           ]
+        },
+        {
+          "id": "acoes-fechadas",
+          "name": "Ações Fechadas",
+          "icon": "🎯",
+          "rules": [
+            {
+              "code": "06.05",
+              "title": "Padronização de Altura",
+              "text": "Durante ações fechadas, todos os participantes devem utilizar a **altura padrão definida pela cidade**.\n\nÉ proibido utilizar alteração de altura para obter pixel, posicionamento, cobertura, sincronização ou qualquer outra vantagem de combate.\n\n> ⚠️ **ATENÇÃO**\n> Exploração de altura ou falha visual poderá gerar punição individual e/ou da facção.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.06",
+              "title": "Máscara e Identificação em Ações",
+              "text": "Em ações fechadas, os participantes do ilegal devem preservar sua identidade utilizando **máscara ou outro meio adequado de ocultação facial**.\n\nApós o encerramento de uma ação, a identificação dos envolvidos deve respeitar aquilo que foi efetivamente obtido dentro do RP. Não é permitido utilizar ID, Discord, tag, live ou informação externa para reconhecer participantes mascarados.\n\n> 🚨 **ATENÇÃO**\n> Procedimentos policiais posteriores devem respeitar as regras do Legal e as condições específicas da ação. A máscara, por si só, não autoriza identificação OOC.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.07",
+              "title": "Reféns e Negociação",
+              "text": "Reféns devem existir como elemento de **RP e negociação**, e não apenas como recurso mecânico para obter vantagem.\n\nQuando a modalidade da ação exigir refém, ele deverá ser mantido em segurança durante a negociação e liberado conforme as condições do cenário.\n\n> ❌ **PROIBIDO**\n> - Executar refém apenas porque a ação terminou;\n> - Utilizar reféns fictícios ou combinados sem desenvolvimento de RP;\n> - Exigir vantagens que a modalidade da ação não permita negociar;\n> - Utilizar refém para alterar **entrada, contingente ou regras fixas da ação**.\n\n> ℹ️ **OBSERVAÇÃO**\n> Atividades em grupo ou ações com regramento próprio podem possuir forma de negociação diferente. A regra específica da modalidade prevalece.",
+              "tag": "NEGOCIAÇÃO"
+            },
+            {
+              "code": "06.08",
+              "title": "Compromisso com Ações Agendadas",
+              "text": "Facções que confirmarem ações de grande porte devem comparecer no horário e respeitar integralmente o **contingente definido para a modalidade**.\n\nAções grandes devem ser solicitadas com **mínimo de 24 horas de antecedência** e dependem da aceitação pelo canal oficial.\n\n> ❌ **PROIBIDO**\n> - Comparecer com efetivo abaixo ou acima do permitido;\n> - Confirmar a ação e faltar sem justificativa válida;\n> - Alterar unilateralmente as condições após a confirmação.\n\nO descumprimento poderá gerar **advertência de facção**.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.09",
+              "title": "Apoio Externo em Ações",
+              "text": "Quando a modalidade permitir, membros de outras facções poderão participar para completar o contingente de ações médias ou grandes.\n\nO apoio deve ser previamente organizado, respeitar alianças e limites da ação e não pode ser utilizado para contornar regras de efetivo.\n\nQuando houver divisão de recompensa entre participantes, a facção organizadora deverá realizar a distribuição de forma coerente com o acordo estabelecido dentro do RP.",
+              "tag": "AÇÃO"
+            }
+          ]
         }
       ],
       "rules": []
@@ -705,7 +742,7 @@
       "code": "07",
       "name": "SUBMUNDO",
       "short": "Ilegal",
-      "desc": "Facções, territórios, alianças e operações do crime organizado.",
+      "desc": "Facções, economia ilegal, territórios, alianças, Cúpula e operações do crime organizado.",
       "subcategories": [
         {
           "id": "faccoes",
@@ -714,52 +751,138 @@
           "rules": [
             {
               "code": "07.01",
-              "title": "Hierarquia",
-              "text": "Organizações devem possuir liderança e funções coerentes com sua proposta, mantendo atividade e RP compatíveis.",
+              "title": "Estrutura, Atividade e Gestão",
+              "text": "Organizações devem possuir liderança, funções e atividade compatíveis com sua proposta.\n\nA liderança deve manter a facção organizada, orientar seus membros e acompanhar condutas, permissões e movimentações internas.\n\n**Diretrizes:**\n- Manter presença e movimentação compatíveis com a proposta da organização;\n- Realizar **ao menos 1 reunião semanal** para alinhamento, revisão de ocorrências e reforço das regras;\n- Manter acompanhamento frequente da conduta dos membros;\n- Garantir que membros utilizem as identificações e tags exigidas nos canais oficiais.\n\nFacções que permanecerem **3 dias com menos de 10 membros ativos** poderão receber aviso de inatividade e ficar sujeitas à perda da organização.\n\n> ⚠️ **ATENÇÃO**\n> A liderança responde pela gestão coletiva da facção, sem substituir a responsabilidade individual de cada jogador.",
               "tag": "FACÇÃO"
             },
             {
               "code": "07.02",
-              "title": "Conflitos",
-              "text": "Conflitos entre organizações devem possuir motivo e escalada de RP. Matar por motivo banal não é justificativa automática.",
+              "title": "Conflitos e Conduta entre Facções",
+              "text": "Conflitos entre organizações devem possuir **motivo, contexto e escalada de RP**.\n\nMatar por motivo banal, criar guerra sem desenvolvimento ou utilizar rivalidade como justificativa automática para PVP não é permitido.\n\nNegociações, cobranças, guerras, sequestros e demais interações do submundo continuam sujeitas às regras gerais de RDM, VDM, Power Gaming, Metagaming, Combat Logging e valorização da vida.",
               "tag": "FACÇÃO"
             },
             {
-              "title": "Alianças entre Organizações",
-              "text": "Alianças, parcerias e operações conjuntas entre organizações devem respeitar os limites definidos pela Administração e existir de forma coerente dentro do RP.\n\n> ❌ **PROIBIDO**\n> Utilizar alianças informais apenas para somar efetivo, interferir em conflitos de terceiros ou contornar limites definidos para ações.",
+              "title": "Alianças e Relações entre Facções",
+              "text": "Alianças, parcerias e operações conjuntas devem existir de forma coerente dentro do RP e respeitar os limites definidos pela Administração.\n\nCada facção poderá manter **até dois aliados oficiais**, formando grupos de até três organizações.\n\n**Regras:**\n- Operações conjuntas que dependam de parceria entre facções devem respeitar alianças oficiais;\n- Facções aliadas devem produzir **itens distintos** quando a estrutura econômica da cidade exigir exclusividade de produção;\n- É proibido utilizar alianças informais apenas para somar efetivo, interferir em conflito de terceiros ou contornar limites de ações;\n- É proibido se passar por outra facção para enganar, infiltrar-se ou praticar ações em nome dela.\n\n> ⚠️ **ATENÇÃO**\n> Regras específicas de ações podem limitar ou impedir apoio externo mesmo entre aliados.",
               "tag": "FACÇÃO",
               "code": "07.03"
             },
             {
               "title": "Responsabilidade da Liderança",
-              "text": "A liderança é responsável pela organização interna, permissões e conduta coletiva de sua facção dentro dos limites administrativos da Viena.\n\nAcesso a baús, cargos, veículos e recursos internos deve ser concedido com responsabilidade.\n\n> ⚠️ **ATENÇÃO**\n> Conflitos internos, desvios ou perdas causadas por permissões concedidas pela própria liderança serão analisados conforme as regras específicas da organização.",
+              "text": "A liderança é responsável pela organização interna, permissões e administração dos recursos da facção.\n\nAcesso a baús, cargos, veículos, painéis e recursos internos deve ser concedido com responsabilidade.\n\n**Cabe à liderança:**\n- Definir acessos de forma segura;\n- Orientar os membros sobre regras e procedimentos;\n- Comunicar problemas relevantes à Administração;\n- Impedir retirada ou distribuição irregular de patrimônio da organização.\n\n> ⚠️ **ATENÇÃO**\n> Perdas decorrentes de permissões concedidas pela própria liderança serão analisadas conforme o contexto. A Staff não garante devolução automática de recursos por conflitos internos.",
               "tag": "FACÇÃO",
               "code": "07.04"
             },
             {
-              "title": "Caixa 2 e Desvio de Baú",
-              "text": "É proibido utilizar acesso interno a uma organização para desviar, esconder ou transferir patrimônio de forma abusiva com o objetivo de prejudicar a facção ou obter vantagem indevida.\n\n> ❌ **PROIBIDO**\n> Esvaziar baús, repassar estoque para terceiros ou utilizar permissões internas de má-fé poderá gerar punição administrativa.",
+              "title": "Caixa 2, Desvio e Patrimônio da Facção",
+              "text": "É proibido utilizar acesso interno para **desviar, esconder, retirar ou transferir patrimônio da facção de má-fé**, especialmente durante saída, troca de liderança, abandono ou remoção da organização.\n\nItens obtidos por **farm, eventos, sistemas da facção ou distribuições da Cúpula** permanecem vinculados à organização. Itens comprovadamente adquiridos individualmente por meios autorizados, como donate, seguem as regras específicas de propriedade aplicáveis.\n\n> ❌ **PROIBIDO**\n> - Esvaziar baús antes de sair;\n> - Repassar estoque a terceiros para evitar recolhimento;\n> - Ocultar patrimônio da organização;\n> - Utilizar permissões internas para causar prejuízo ou obter vantagem indevida.\n\nA restituição voluntária poderá ser considerada na análise administrativa, mas **não apaga automaticamente a infração**. Gravidade, intenção, prejuízo e reincidência serão avaliados pela Staff.",
               "tag": "FACÇÃO",
               "code": "07.05"
             }
           ]
         },
         {
-          "id": "atividades-ilegais",
-          "name": "Atividades Ilegais",
-          "icon": "📦",
+          "id": "economia-ilegal",
+          "name": "Economia & Comércio",
+          "icon": "💰",
           "rules": [
             {
               "code": "07.06",
-              "title": "Oficinas clandestinas",
-              "text": "Oficinas podem atuar como pontos de preparação, modificação e manutenção de veículos, desde que respeitem as regras de economia e RP.",
-              "tag": "CRIME"
+              "title": "Comércio e Compartilhamento entre Facções",
+              "text": "A circulação de itens entre facções deve ocorrer por **RP, negociação e comércio legítimo**, respeitando os valores oficiais definidos pela cidade.\n\nÉ proibido doar, trocar gratuitamente ou realizar transações simbólicas com itens de produção para beneficiar outra organização, independentemente de amizade, namoro, família ou vínculo OOC.\n\n> ❌ **PROIBIDO**\n> - Doação de produção entre facções;\n> - Venda abaixo ou acima do valor oficial para favorecer terceiros;\n> - Descontos, parcerias ou acordos que burlem a tabela;\n> - Fake venda;\n> - Escambo utilizado para evitar o preço oficial;\n> - Transferência artificial de riqueza entre organizações.\n\n> ⚠️ **ATENÇÃO**\n> Tentativas de burlar a economia poderão gerar confisco, punição da organização e outras medidas administrativas conforme a gravidade.",
+              "tag": "ECONOMIA"
             },
             {
               "code": "07.07",
-              "title": "Contrabando",
-              "text": "Peças, veículos e itens ilegais podem integrar o RP criminoso quando houver sistemas ou autorização específicos para isso.",
-              "tag": "CRIME"
+              "title": "Valores Oficiais",
+              "text": "Valores oficiais de itens, produtos, recompensas e serviços regulados pela cidade devem ser respeitados.\n\nÉ proibido criar tabelas paralelas, manipular preços oficiais ou utilizar acordos internos para alterar artificialmente os valores definidos pela Administração.\n\nA Administração poderá realizar ajustes de balanceamento econômico. Alterações relevantes para facções deverão ser comunicadas pelos canais oficiais e, quando necessário, alinhadas com as lideranças.",
+              "tag": "ECONOMIA"
+            },
+            {
+              "code": "07.08",
+              "title": "Recrutamento e Promessas Indevidas",
+              "text": "É proibido utilizar dinheiro, itens da facção, vantagens desproporcionais ou promessas irreais como ferramenta de recrutamento.\n\nDivulgações públicas de recrutamento devem representar de forma coerente a realidade da organização e não podem ser utilizadas para oferecer benefícios fora do padrão econômico da cidade.\n\n> ✅ **PERMITIDO**\n> Recrutar com base na proposta, organização, RP, estrutura e benefícios oficialmente existentes da facção.",
+              "tag": "FACÇÃO"
+            },
+            {
+              "code": "07.09",
+              "title": "Leilões do Ilegal",
+              "text": "Lances em leilões oficiais devem ser compatíveis com a capacidade financeira da organização.\n\nÉ proibido ofertar valor que a facção não possua ou inflacionar deliberadamente o leilão com lance sem intenção ou condição de pagamento.\n\nO não cumprimento de lance vencedor poderá gerar cobrança, recolhimento de recursos e outras sanções administrativas conforme a situação.",
+              "tag": "ECONOMIA"
+            }
+          ]
+        },
+        {
+          "id": "operacoes-submundo",
+          "name": "Operações & Territórios",
+          "icon": "🗺️",
+          "rules": [
+            {
+              "code": "07.10",
+              "title": "Farms e Controle de Território",
+              "text": "Farms e territórios devem ser mantidos por **presença ativa e RP coerente**.\n\nÉ proibido permanecer em farm apenas para provocar conflito, criar emboscada sem contexto ou utilizar domínio territorial como justificativa automática para combate.\n\nQuando uma regra de incursão determinar perda temporária de controle de um farm, a organização deverá respeitar integralmente o período e as condições estabelecidas para retomada.",
+              "tag": "TERRITÓRIO"
+            },
+            {
+              "code": "07.11",
+              "title": "Pacificação e Restrição de Atividades",
+              "text": "Quando uma facção estiver sob **pacificação formalmente determinada pela Administração**, seus membros deverão respeitar as restrições comunicadas para aquele período.\n\nQuando a medida determinar suspensão total das atividades da organização, fica proibido utilizar sede, farm, produção, baús, garagens, eventos, reuniões ou anúncios em nome da facção até a liberação oficial.\n\n> ⚠️ **ATENÇÃO**\n> As condições e duração da pacificação serão as informadas no procedimento administrativo correspondente.",
+              "tag": "FACÇÃO"
+            },
+            {
+              "code": "07.12",
+              "title": "Invasão ao Departamento Policial",
+              "text": "É proibido invadir o Departamento Policial para realizar resgate, confronto ou ação ofensiva.\n\nTentativas de resgate devem ocorrer por meios permitidos pelas regras da cidade e com desenvolvimento de RP, sem transformar a DP em local de invasão.\n\n> 🚨 **ATENÇÃO**\n> A DP possui proteção específica conforme as regras de zonas. Invasões poderão gerar punições severas ao jogador e consequências administrativas para a facção envolvida.",
+              "tag": "POLÍCIA"
+            },
+            {
+              "code": "07.13",
+              "title": "Redistribuição de Recursos de Facções Removidas",
+              "text": "Quando uma organização for removida por abandono, inatividade ou decisão administrativa, os recursos vinculados à facção poderão ser recolhidos pela Administração.\n\nEsses recursos poderão retornar à economia por **leilão, negociação oficial ou outro mecanismo administrativo**.\n\nÉ proibido retirar ou repassar patrimônio da facção antecipadamente com o objetivo de impedir o recolhimento.",
+              "tag": "ECONOMIA"
+            }
+          ]
+        },
+        {
+          "id": "conduta-submundo",
+          "name": "Conduta & Informação",
+          "icon": "🕶️",
+          "rules": [
+            {
+              "code": "07.14",
+              "title": "Saída de Facção e Informações",
+              "text": "Ao deixar uma facção, o personagem não poderá utilizar informações internas, rotinas, contatos, estratégias ou conhecimentos obtidos na organização anterior para beneficiar outra facção ou prejudicar a antiga.\n\nQuando houver determinação de **PD**, o jogador deverá respeitar integralmente a perda de memória estabelecida.\n\nO retorno ou ingresso em outra organização ilegal deverá respeitar eventual **prazo de blacklist informado pela Administração**. Quando aplicado o padrão de **72 horas**, a contagem deverá ser cumprida antes de nova setagem.\n\n> ⚠️ **ATENÇÃO**\n> Utilizar conhecimento antigo sem reconstruí-lo dentro do RP poderá ser tratado como Metagaming.",
+              "tag": "ROLEPLAY"
+            },
+            {
+              "code": "07.15",
+              "title": "Uso do Chat Ilegal",
+              "text": "O chat ilegal é destinado a anúncios, vendas, negociações e comunicações relacionadas ao submundo.\n\nÉ proibido utilizar o canal para farpas, discussões pessoais, provocações, ofensas ou conflitos OOC entre jogadores e organizações.\n\nO uso abusivo poderá gerar medidas de chat e punições administrativas conforme reincidência e gravidade.",
+              "tag": "CONDUTA"
+            },
+            {
+              "code": "07.16",
+              "title": "Divulgação de Produtos Ilegais",
+              "text": "Anúncios públicos devem preservar a imersão e utilizar a nomenclatura alternativa definida oficialmente pela cidade quando o canal exigir linguagem disfarçada.\n\nA lista oficial de termos deverá ser consultada no canal ou tabela vigente, evitando que esta regra fique desatualizada sempre que produtos forem adicionados ou renomeados.\n\n> ❌ **PROIBIDO**\n> Expor diretamente produtos ou serviços ilegais em canais públicos quando houver exigência de nomenclatura codificada.",
+              "tag": "ROLEPLAY"
+            },
+            {
+              "code": "07.17",
+              "title": "Conduta e Sigilo com a Cúpula",
+              "text": "Informações internas da Cúpula devem permanecer restritas aos participantes autorizados.\n\nÉ proibido registrar, compartilhar ou vazar fotos, vídeos, conversas, reuniões, convites, missões ou provas administrativas classificadas como internas.\n\nTambém é obrigatório manter postura adequada durante reuniões e atividades oficiais.\n\n> ⚠️ **ATENÇÃO**\n> Vazamentos, exposição deliberada de conteúdo interno ou quebra grave de sigilo poderão resultar em medidas administrativas severas, inclusive consequências ao personagem quando previstas pelo RP.",
+              "tag": "CÚPULA"
+            },
+            {
+              "code": "07.18",
+              "title": "Missões da Cúpula",
+              "text": "Missões propostas pela Cúpula integram a movimentação do submundo e poderão gerar recompensas ou benefícios conforme participação, organização, qualidade do RP e cumprimento dos objetivos.\n\nBenefícios podem ser destinados à facção ou ao grupo participante e serão definidos conforme a missão.\n\n> ℹ️ **OBSERVAÇÃO**\n> Critérios, recompensas e condições devem ser os anunciados oficialmente para cada missão.",
+              "tag": "CÚPULA"
+            },
+            {
+              "code": "07.19",
+              "title": "Revisão de Punições de Membros",
+              "text": "A liderança poderá solicitar esclarecimento administrativo sobre punições de seus membros pelos canais adequados.\n\nQuando houver apresentação de material interno de análise, provas protegidas ou informações restritas, o líder deverá preservar o sigilo e repassar aos demais apenas aquilo que estiver autorizado.\n\n> ❌ **PROIBIDO**\n> Distorcer decisão administrativa, divulgar prova restrita ou utilizar conteúdo interno para fomentar exposição, perseguição ou desinformação.",
+              "tag": "ADMINISTRAÇÃO"
             }
           ]
         }
@@ -812,7 +935,7 @@
             {
               "code": "08.05",
               "title": "PIT",
-              "text": "O PIT deve ser utilizado de maneira proporcional e em condições que não caracterizem abuso deliberado da mecânica.",
+              "text": "A realização de PIT durante perseguições é proibida.\n\n> ❌ **PROIBIDO**\n> Não é permitido realizar manobras de PIT contra o veículo em fuga.",
               "tag": "POLÍCIA"
             },
             {
@@ -841,8 +964,8 @@
               "code": "08.08"
             },
             {
-              "title": "Incursões em Área de Risco",
-              "text": "A entrada de forças legais em áreas dominadas por organizações deve possuir motivo de RP e respeitar os procedimentos definidos para incursões.\n\n> ⚠️ **ATENÇÃO**\n> A simples existência de uma área ilegal não autoriza incursões aleatórias. Continuação de perseguição, disparos ou operações autorizadas devem seguir as regras específicas da Viena.",
+              "title": "Incursão Policial",
+              "text": "A polícia poderá realizar uma incursão na favela em situações nas quais ocorram disparos contra oficiais dentro da comunidade.\n\nEm casos de troca de tiros ou de uma quantidade elevada de disparos, a polícia deverá se deslocar até o local e realizar, primeiramente, uma tentativa de diálogo, solicitando que os disparos sejam cessados e que as ordens policiais sejam cumpridas.\n\nCaso os envolvidos continuem efetuando disparos, se recusem a obedecer às ordens ou ofereçam resistência, a polícia poderá realizar a incursão na comunidade.\n\nA incursão também poderá ocorrer quando indivíduos envolvidos em uma ocorrência empreenderem fuga para dentro da favela, desde que a perseguição esteja diretamente relacionada à ocorrência em andamento.\n\nEm todas as situações, o primeiro contato deverá ser realizado por meio do diálogo, priorizando o RP e evitando ações precipitadas. A abordagem deverá respeitar a coerência da situação e proporcionar oportunidade para que os envolvidos reajam e desenvolvam o RP.",
               "tag": "POLÍCIA",
               "code": "08.09"
             },
@@ -1258,6 +1381,12 @@
     }
   ],
   "updates": [
+    {
+      "date": "02 OUT 2026",
+      "title": "Reestruturação do Submundo",
+      "text": "Regras do ilegal consolidadas, duplicidades removidas e temas redistribuídos entre Submundo, Ações, Zonas e Personagem.",
+      "tag": "REGRAS"
+    },
     {
       "date": "02 OUT 2026",
       "title": "Fuga Limpa",
