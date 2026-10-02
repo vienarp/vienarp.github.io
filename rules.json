@@ -571,28 +571,103 @@
           "icon": "📍",
           "rules": [
             {
+              "code": "06.01",
               "title": "Equilíbrio de Ação",
-              "text": "Ações organizadas devem respeitar os limites de participantes, armamentos, veículos e condições anunciadas para aquela modalidade.\n\n> ⚠️ **ATENÇÃO**\n> Entrar com efetivo, equipamento ou suporte acima do permitido poderá invalidar a ação e gerar punição.",
-              "tag": "AÇÃO",
-              "code": "06.01"
+              "text": "Ações organizadas devem respeitar os limites de participantes, armamentos, veículos e condições anunciadas para cada modalidade.\n\nTodos os participantes da ocorrência deverão permanecer **dentro da área da ação**. Caso qualquer participante esteja do lado de fora portando arma em mãos, efetuando disparos ou prestando apoio externo armado, a ocorrência será automaticamente caracterizada como **Ação de Rua**, passando a seguir as regras específicas dessa modalidade.\n\n> ⚠️ **ATENÇÃO**\n> Entrar com efetivo, equipamento ou suporte acima do permitido poderá invalidar a ação e gerar punição.",
+              "tag": "AÇÃO"
             },
             {
-              "title": "Encerramento de Ação",
-              "text": "Participantes abatidos em ações organizadas devem respeitar o encerramento do cenário antes de utilizar recursos que retirem o personagem da situação, quando a modalidade da ação exigir permanência até o fim.\n\n> ℹ️ **OBSERVAÇÃO**\n> Regras específicas da ação prevalecem quando definirem condições próprias de encerramento.",
-              "tag": "AÇÃO",
-              "code": "06.02"
+              "code": "06.02",
+              "title": "Encerramento e Retorno à Ação",
+              "text": "Participantes abatidos em ações organizadas devem respeitar o encerramento do cenário antes de utilizar recursos que retirem o personagem da situação, quando a modalidade exigir permanência até o fim.\n\nApós ser reanimado, o participante **não poderá retornar à ação**, devendo deixar o local imediatamente.\n\nTambém é proibido ingressar no servidor após o início de uma ação com o objetivo de participar dela. Em caso de crash ou desconexão, o jogador não poderá retornar para continuar participando da ação já iniciada.\n\n> ℹ️ **OBSERVAÇÃO**\n> Regras específicas da ação prevalecem quando definirem condições próprias de encerramento.",
+              "tag": "AÇÃO"
             },
             {
-              "title": "Uso de Escudos Balísticos em Ações Grandes",
-              "text": "Em ações de grande porte, a polícia poderá utilizar até 2 escudos balísticos, sendo permitido no máximo 2 policiais (um por escudo).\n\nCaso a facção deseje a remoção dos escudos, será obrigatório possuir refém ativo na ação, utilizando a negociação como meio para solicitar essa condição.\n\nA negociação deve ser feita dentro do RP, cabendo à polícia aceitar ou não conforme o desenvolvimento da situação.\n\n**Exemplo:**\n- ❌ Polícia utilizando mais de 2 escudos\n- ❌ Polícia utilizar escudo em ações de rua\n- ❌ Solicitar retirada de escudo sem possuir refém\n- ✅ Utilizar refém para negociar remoção de escudos\n- ✅ Respeitar limite de escudos por ação",
-              "tag": "AÇÃO",
-              "code": "06.03"
+              "code": "06.03",
+              "title": "Limite de Ações",
+              "text": "Cada organização poderá realizar **1 (uma) Ação Grande por dia**.\n\nAções Médias e Pequenas permanecem liberadas, desde que sejam respeitadas todas as demais regras, limites e condições específicas de cada modalidade.",
+              "tag": "AÇÃO"
             },
             {
-              "title": "Uso de P2 (Nióbio) e Negociação",
-              "text": "O uso do P2 do Nióbio é liberado para a polícia em ações.\n\nÉ proibido solicitar ou negociar a retirada do P2 da ação, mesmo mediante negociação com refém. A existência ou quantidade de reféns não altera essa condição.\n\n**Exemplo:**\n- ❌ Solicitar remoção do P2 da ação\n- ❌ Utilizar refém para tentar negociar a retirada do P2\n- ❌ Utilizar múltiplos reféns como justificativa para retirar o P2\n- ✅ Utilizar o P2 do Nióbio pela polícia em ações\n\nO descumprimento será considerado quebra de regra de ação, passível de punição administrativa.",
-              "tag": "AÇÃO",
-              "code": "06.04"
+              "code": "06.04",
+              "title": "Armamentos e Equipamentos",
+              "text": "É proibido utilizar qualquer arma que não esteja expressamente autorizada nas regras específicas de cada ação.\n\nÉ permitido o uso de, no máximo, **1 (um) colete reserva além do colete já equipado** durante ações fechadas, incluindo lojas, bancos e carros-fortes.\n\nÉ permitido o uso de **energético e cocaína**, sendo que ambos possuem o mesmo efeito. Qualquer outra droga ou consumível que conceda vantagem é proibido durante a ação.\n\nAs limitações de colete, drogas e consumíveis são válidas **para ambos os lados da ação**.\n\nÉ proibido o uso de capacetes durante qualquer ação fechada.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.05",
+              "title": "Posicionamento e Acessos",
+              "text": "Durante ações fechadas:\n- É proibido acessar o interior de residências.\n- É proibido conduzir a ação para áreas de empregos legais, como a Central de Taxistas ou locais similares.\n- É proibida a movimentação ou troca de posicionamento utilizando veículos.\n- A utilização do helicóptero da Polícia permanece permitida quando prevista para a modalidade.\n- É proibido bloquear acessos ou entradas de qualquer local.\n- É proibido fugir para locais que possuam apenas uma única entrada ou saída.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.06",
+              "title": "Marcação do Drop da Polícia",
+              "text": "É proibido marcar, camperar ou utilizar como ponto de vantagem o local de **drop/entrada da Polícia** em ações fechadas.\n\n**Exemplos:**\n- Escada ou elevador do Nióbio;\n- Lustre do Banco Central;\n- Outros pontos equivalentes utilizados para entrada/drop policial.\n\n> ❌ **PROIBIDO**\n> Posicionar-se com o objetivo de eliminar policiais no exato ponto em que realizam a entrada/drop da ação.",
+              "tag": "AÇÃO"
+            }
+          ]
+        },
+        {
+          "id": "refens-negociacao",
+          "name": "Reféns & Negociação",
+          "icon": "🤝",
+          "rules": [
+            {
+              "code": "06.07",
+              "title": "Regras de Reféns",
+              "text": "Reféns utilizados em ações não poderão possuir qualquer vínculo ou participação com os sequestradores. É proibido utilizar integrantes da própria facção ou organização como reféns.\n\nPara iniciar/puxar uma **Ação Grande**, é necessário possuir **1 (um) refém válido**.\n\n> ⚠️ **ATENÇÃO**\n> O refém deve ser legítimo e respeitar também todas as regras gerais de sequestro.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.08",
+              "title": "Trocas Permitidas por Refém",
+              "text": "Em ações fechadas, reféns poderão ser utilizados para negociar as seguintes condições:\n- Remoção do **Calibre 12**;\n- Remoção de até **1 (um) escudo policial**;\n- Remoção de **granada de fumaça (smoke)**;\n- Condição de **teto e chão**.\n\nQuando houver participantes autorizados fora da área principal da ação, também poderá ser negociada a **remoção de 1 (um) atirador do helicóptero**.\n\nNão é permitido trocar reféns pela remoção ou bloqueio de uma **entrada da ação**, incluindo, por exemplo, o **P2 do Nióbio** ou entradas do Banco Central.\n\n> ❌ **PROIBIDO**\n> Utilizar um refém para negociar a retirada de entradas da ação.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.09",
+              "title": "Escudos Policiais",
+              "text": "É permitido o uso de, no máximo, **2 (dois) escudos policiais por ação**, respeitando as condições da modalidade.\n\nA negociação com refém poderá solicitar a remoção de **até 1 (um) escudo policial**, conforme a regra de trocas permitidas.\n\n> ❌ **PROIBIDO**\n> Utilizar quantidade superior a 2 escudos na mesma ação.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.10",
+              "title": "P2 do Nióbio",
+              "text": "O uso do **P2 do Nióbio** é permitido para a Polícia quando fizer parte da ação.\n\nÉ proibido solicitar ou negociar a retirada do P2, inclusive mediante utilização de reféns. A existência ou quantidade de reféns não altera essa condição.\n\n> ❌ **PROIBIDO**\n> Trocar refém pela remoção do P2 ou de qualquer outra entrada da ação.",
+              "tag": "AÇÃO"
+            }
+          ]
+        },
+        {
+          "id": "sequestro",
+          "name": "Sequestro",
+          "icon": "⛓️",
+          "rules": [
+            {
+              "code": "06.11",
+              "title": "Sequestro — Regras Gerais",
+              "text": "Apenas membros **setados em uma organização ilegal** podem realizar sequestros.\n\n**Regras:**\n- O uso de algemas é obrigatório assim que o indivíduo for rendido.\n- É permitido confiscar apenas rádios e celulares.\n- Armamento poderá ser retirado apenas para defesa do sequestrador.\n- É proibido remover o item energético.\n- É proibido sequestrar jogadores em rotas de farm ou empregos legais/ilegais.\n- É proibido sequestrar ou matar mecânicos e médicos em serviço e uniformizados.\n- É proibido utilizar motos para transportar o sequestrado.\n- É proibido sequestrar pessoas que possuam vínculo pessoal com os sequestradores.\n- É proibido pedir veículos para a fuga.\n- O máximo de sequestrados por veículo é **2 (dois)**.\n- É proibido realizar sequestro em Safe Zones ou levar o sequestrado para zonas seguras.\n- É proibido sequestrar grávidas, crianças ou realizar sequestro em ambientes com presença de criança.\n- É proibido solicitar que o próprio refém realize o pagamento.\n- É proibido levar o sequestrado para dentro de favelas ou QGs.\n- O número de sequestradores deve ser **maior que o número de reféns**.",
+              "tag": "AÇÃO"
+            },
+            {
+              "code": "06.12",
+              "title": "Limite de Sequestros para Ações de Rua",
+              "text": "Para ações de rua, cada organização poderá realizar no máximo **3 (três) sequestros por semana**, com limite de **5 (cinco) reféns por ação**.\n\n> ⚠️ **ATENÇÃO**\n> Os limites não anulam as demais regras de sequestro, abordagem, reféns e ações de rua.",
+              "tag": "AÇÃO"
+            }
+          ]
+        },
+        {
+          "id": "ocorrencias-fuga-limpa",
+          "name": "Ocorrências de Fuga Limpa",
+          "icon": "🚔",
+          "rules": [
+            {
+              "code": "06.13",
+              "title": "Registradora, ATM, Corrida Ilegal e Roubo de Propriedades",
+              "text": "Nas ocorrências de **Caixa Registradora, ATM, Corrida Ilegal e Roubo de Propriedades**, a fuga deverá ser priorizada em todos os momentos.\n\n**Regras:**\n- É proibida a utilização de armas brancas, armas de fogo ou qualquer outro meio ofensivo durante a fuga.\n- É proibida a realização de disparos por qualquer das partes.\n- A fuga deverá ocorrer de forma limpa para criminosos e policiais, exceto em situações de **Código 5**, quando passam a valer as regras específicas desse protocolo.\n- Os policiais poderão utilizar apenas o armamento que estiverem portando no momento do início da ocorrência, sendo proibida a troca de equipamentos durante a ação.\n- É proibido transformar a ocorrência em **Ação de Rua**.\n- Criminosos: limite de **1 (um) veículo**, respeitando sua capacidade máxima de ocupantes.\n- Polícia: até **12 rodas** (ex.: 2 Speed e 2 GTM), sem contabilizar o helicóptero.\n- É permitido apenas **1 (um) helicóptero Águia** durante a perseguição.\n- É proibida a utilização de reféns em ocorrências de Caixa Registradora.\n- Não haverá negociação entre as partes antes ou durante a ação.\n\nCaso a Polícia Militar chegue enquanto os criminosos estiverem coletando, ou prestes a coletar, o dinheiro, deverá aguardar a conclusão da coleta antes de iniciar a abordagem. Caso os suspeitos ainda não tenham iniciado a coleta, a polícia poderá realizar a abordagem normalmente, inclusive antes da instalação da carga explosiva (C4), desde que a situação decorra de uma abordagem legítima e seja observado o bom senso.\n\nTodas as regras referentes à condução da perseguição deverão seguir integralmente o regulamento de **Fuga Limpa**.",
+              "tag": "AÇÃO"
             }
           ]
         },
@@ -602,7 +677,7 @@
           "icon": "🚗",
           "rules": [
             {
-              "code": "06.05",
+              "code": "06.14",
               "title": "Furto de Veículos",
               "text": "O furto de veículos deve acontecer de maneira coerente com o RP e **não pode ser utilizado como justificativa para iniciar um confronto de forma forçada**.\n\n**É permitido:**\n- Furtar veículos que estejam abandonados ou destrancados.\n- Realizar o furto sem utilização de violência.\n- Utilizar o veículo furtado dentro das limitações previstas pelas demais regras da cidade.\n\n**É proibido:**\n- Criar um RP forçado apenas para furtar um veículo.\n- Utilizar o furto como pretexto para iniciar um PVP.\n- Furtar veículos com o objetivo de utilizá-los em ações de rua quando houver proibição específica para esse tipo de veículo.\n\n> ⚠️ ATENÇÃO\n> Caso exista uma situação de “desce e quebra” sem construção de RP prévia, a situação poderá ser caracterizada como RDM.",
               "tag": "COMBATE"
@@ -615,10 +690,10 @@
           "icon": "📦",
           "rules": [
             {
+              "code": "06.15",
               "title": "Ações com Regramento Próprio",
               "text": "Airdrop, Helicrash e outras ações especiais podem possuir **regras adicionais específicas** divulgadas pela Administração.\n\nQuando existir regra própria para uma ação, ela deve ser lida em conjunto com as regras gerais de combate, interferência, loot e atuação policial.\n\n> ⚠️ **ATENÇÃO**\n> Nenhuma ação especial anula RDM, VDM, Metagaming, Combat Logging ou demais regras fundamentais da cidade.",
-              "tag": "AÇÃO",
-              "code": "06.06"
+              "tag": "AÇÃO"
             }
           ]
         }
