@@ -47,7 +47,7 @@
     if (!isRules) return originalFetch(input, init);
 
     const [rulesResponse, patchResponse] = await Promise.all([
-      originalFetch("./rules.json", init),
+      originalFetch("./content/rules.json", { ...init, cache: "no-store" }),
       originalFetch("./content/rules-patch.json", { cache: "no-store" })
     ]);
 
