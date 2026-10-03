@@ -628,7 +628,7 @@
             {
               "code": "06.09",
               "title": "Escudos Policiais",
-              "text": "É permitido o uso de, no máximo, **2 (dois) escudos policiais por ação**, respeitando as condições da modalidade.\n\nA negociação com refém poderá solicitar a remoção de **até 1 (um) escudo policial**, conforme a regra de trocas permitidas.\n\n> ❌ **PROIBIDO**\n> Utilizar quantidade superior a 2 escudos na mesma ação.\n\n> ⚠️ **OBSERVAÇÃO IMPORTANTE**\n> É de extrema proibição o uso do **ESCUDO** em ações de rua, pequenas ou médias.\n>\n> O descumprimento será considerado **quebra de regra de ação**, passível de **punição administrativa/guarnição**.",
+              "text": "É permitido o uso de, no máximo, **2 (dois) escudos policiais por ação**, respeitando as condições da modalidade.\n\nA negociação com refém poderá solicitar a remoção de **até 1 (um) escudo policial**, conforme a regra de trocas permitidas.\n\n> ❌ **PROIBIDO**\n> Utilizar quantidade superior a 2 escudos na mesma ação.\n\n> ⚠️ **OBSERVAÇÃO IMPORTANTE**\n> É de extrema proibição o uso do **ESCUDO** em ações de rua, pequenas ou médias.\n>\n> O descumprimento será considerado quebra de regra de ação, passível de **punição administrativa/guarnição**.",
               "tag": "AÇÃO"
             },
             {
@@ -733,19 +733,6 @@
               "tag": "AÇÃO"
             }
           ]
-        },
-        {
-          "id": "pacificacao",
-          "name": "Pacificação",
-          "icon": "🚨",
-          "rules": [
-            {
-              "code": "06.21",
-              "title": "Regulamento da Pacificação",
-              "text": "O anúncio da pacificação deverá ser publicado oficialmente na aba **Intimações do e-mail da cidade**. A facção que será alvo da pacificação deverá ser informada previamente sobre a **data e o horário da ação**.\n\n### Após o anúncio oficial\n- Fica proibida a retirada ou o depósito de qualquer item nos **baús e cofres localizados no QG da facção**;\n- Qualquer movimentação de itens durante esse período acarretará **punição administrativa à facção**;\n- O **Tablet da facção será bloqueado**, impedindo qualquer contratação ou alteração no quadro de membros até o término da ação;\n- Facções que possuírem **baús ou cofres adicionais** deverão informar sua localização durante o alinhamento que antecede a pacificação.\n\n### Penalidades aplicadas à facção\n- Confisco de **100% dos itens armazenados nos baús de líderes e membros**;\n- Confisco de **30% do saldo da facção**;\n- A organização ficará **imune a novas pacificações por 30 (trinta) dias**.\n\n### Derrota, retomada e ausência\nCaso a facção seja derrotada, seus integrantes ficarão proibidos de retornar ao **QG ou à favela por 48 horas**.\n\nDurante as primeiras **24 horas**, a facção poderá tentar recuperar seu território por meio de uma **retomada contra a polícia**.\n\n> ℹ️ **RETOMADA**\n> A retomada será considerada **uma nova ação**. Ela não autoriza participantes abatidos a retornarem à pacificação já encerrada e deverá respeitar as regras aplicáveis à nova ocorrência.\n\nCaso a facção **não compareça no dia e horário previamente estabelecidos**, ficará impedida de retornar à sua base pelo período de **5 (cinco) dias**.\n\n### Regras durante a Pacificação\nTodas as regras gerais do servidor permanecem válidas durante a pacificação.\n\nÉ proibido:\n- Utilizar **binds, macros ou qualquer mecanismo semelhante** para obter vantagem durante a ação;\n- Que os cargos **01, 02 e 03 da facção recebam GG** enquanto a pacificação estiver em andamento, exceto quando se tratar de policiais.\n\nO descumprimento dessas condições resultará em **punição administrativa**.\n\n### Limites da Polícia\nDurante a pacificação, a Polícia poderá utilizar no máximo:\n- **03 (três) helicópteros**;\n- **03 (três) Caveirões**.\n\n> 🚨 **PROCEDIMENTO ESPECÍFICO**\n> Por se tratar de uma operação previamente anunciada e alinhada, as regras específicas da **Pacificação** prevalecem sobre procedimentos gerais de incursão quando houver conflito entre eles.\n\n### Encerramento\nApós o término oficial da pacificação, fica proibida a permanência ou utilização de **veículos pertencentes à Polícia por qualquer jogador**, devendo todos ser recolhidos o mais rápido possível.",
-              "tag": "PACIFICAÇÃO"
-            }
-          ]
         }
       ],
       "rules": []
@@ -776,7 +763,7 @@
             },
             {
               "title": "Alianças e Relações entre Facções",
-              "text": "Alianças, parcerias e operações conjuntas devem existir de forma coerente dentro do RP e respeitar os limites definidos pela Administração.\n\nCada facção poderá manter até **três aliados oficiais**, formando grupos de até **quatro organizações**.",
+              "text": "Alianças, parcerias e operações conjuntas devem existir de forma coerente dentro do RP e respeitar os limites definidos pela Administração.\n\nCada facção poderá manter **até dois aliados oficiais**, formando grupos de até três organizações.\n\n**Regras:**\n- Operações conjuntas que dependam de parceria entre facções devem respeitar alianças oficiais;\n- Facções aliadas devem produzir **itens distintos** quando a estrutura econômica da cidade exigir exclusividade de produção;\n- É proibido utilizar alianças informais apenas para somar efetivo, interferir em conflito de terceiros ou contornar limites de ações;\n- É proibido se passar por outra facção para enganar, infiltrar-se ou praticar ações em nome dela.\n\n> ⚠️ **ATENÇÃO**\n> Regras específicas de ações podem limitar ou impedir apoio externo mesmo entre aliados.",
               "tag": "FACÇÃO",
               "code": "07.03"
             },
@@ -838,8 +825,8 @@
             },
             {
               "code": "07.11",
-              "title": "Pacificação e Restrição de Atividades",
-              "text": "Quando uma facção estiver sob **pacificação formalmente determinada pela Administração**, seus membros deverão respeitar as restrições comunicadas para aquele período.\n\nQuando a medida determinar suspensão total das atividades da organização, fica proibido utilizar sede, farm, produção, baús, garagens, eventos, reuniões ou anúncios em nome da facção até a liberação oficial.\n\n> ⚠️ **ATENÇÃO**\n> As condições e duração da pacificação serão as informadas no procedimento administrativo correspondente.",
+              "title": "Pacificação",
+              "text": "O anúncio da **pacificação** deverá ser publicado oficialmente na aba **Intimações do e-mail da cidade**. A facção que será alvo da pacificação deverá ser informada previamente sobre a **data e o horário** da ação.\n\n### 📢 APÓS O ANÚNCIO OFICIAL\n- Fica proibida a **retirada ou o depósito de qualquer item** nos baús e cofres localizados no QG da facção.\n- Qualquer movimentação de itens durante esse período acarretará **punição administrativa à facção**.\n- O **Tablet da facção será bloqueado**, impedindo contratações ou alterações no quadro de membros até o término da ação.\n- Facções que possuírem **baús ou cofres adicionais** deverão informar sua localização durante o alinhamento que antecede a pacificação.\n\n### ⚖️ PENALIDADES APLICADAS À FACÇÃO\n- Confisco de **100% dos itens** armazenados nos baús de líderes e membros.\n- Confisco de **30% do saldo da facção**.\n- Após a pacificação, a organização ficará **imune a novas pacificações por 30 (trinta) dias**.\n\n### 🏴 RESULTADO E RETOMADA\nCaso a facção seja **derrotada**, seus integrantes ficarão proibidos de retornar ao **QG ou à favela pelo período de 48 horas**.\n\nDurante as **primeiras 24 horas**, a facção poderá tentar recuperar seu território por meio de uma **retomada contra a Polícia**. A retomada será considerada **uma nova ação**, não autorizando o retorno de participantes à pacificação já encerrada.\n\nCaso a facção **não compareça** no dia e horário previamente estabelecidos, ficará impedida de retornar à sua base pelo período de **5 (cinco) dias**.\n\n### 🚨 REGRAS DURANTE A PACIFICAÇÃO\n- Todas as regras gerais do servidor permanecem válidas durante a pacificação.\n- É proibido utilizar **binds, macros ou qualquer mecanismo semelhante** para obter vantagem durante a ação.\n- É proibido que os cargos **01, 02 e 03** da facção recebam **GG** enquanto a pacificação estiver em andamento, exceto quando se tratar de policiais. O descumprimento resultará em **punição administrativa**.\n- Por se tratar de uma operação previamente anunciada e alinhada, as **regras específicas da Pacificação prevalecem** sobre procedimentos gerais de incursão quando houver conflito entre as normas.\n\n### 🚁 LIMITES DA POLÍCIA\nDurante a pacificação, a Polícia poderá utilizar no máximo:\n- **03 (três) helicópteros**;\n- **03 (três) Caveirões**.\n\n### 🚔 ENCERRAMENTO\nApós o término oficial da pacificação, fica proibida a permanência ou utilização de **veículos pertencentes à Polícia** por qualquer jogador, devendo todos ser recolhidos o mais rápido possível.",
               "tag": "FACÇÃO"
             },
             {
