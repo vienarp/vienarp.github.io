@@ -722,15 +722,21 @@
             },
             {
               "code": "06.19",
-              "title": "Compromisso com Ações Agendadas",
-              "text": "Facções que confirmarem ações de grande porte devem comparecer no horário e respeitar integralmente o **contingente definido para a modalidade**.\n\nAções grandes devem ser solicitadas com **mínimo de 24 horas de antecedência** e dependem da aceitação pelo canal oficial.\n\n> ❌ **PROIBIDO**\n> - Comparecer com efetivo abaixo ou acima do permitido;\n> - Confirmar a ação e faltar sem justificativa válida;\n> - Alterar unilateralmente as condições após a confirmação.\n\nO descumprimento poderá gerar **advertência de facção**.",
-              "tag": "AÇÃO"
+              "title": "Compromisso com Ações Grandes",
+              "text": "Facções que marcarem ações de grande porte devem obrigatoriamente comparecer no horário definido, sendo proibido desmarcar ou não participar sem justificativa válida.\n\nApós o agendamento, a facção deve garantir o **contingente mínimo e máximo exigido**, conforme definido na aba de **CONTINGENTE AÇÕES FECHADAS**, não sendo permitido participar com número inferior ou superior ao estabelecido.\n\nToda ação grande deverá ser marcada com **mínimo de 24 horas de antecedência**, sendo obrigatório aguardar a aceitação no Discord Principal antes da realização.\n\n> ❌ **PROIBIDO**\n> - Marcar ação e não comparecer sem justificativa válida;\n> - Comparecer com menos membros que o mínimo exigido;\n> - Exceder o número permitido de participantes;\n> - Realizar a ação antes da aceitação oficial.\n\n> ✅ **CORRETO**\n> - Comparecer no horário com o contingente correto;\n> - Respeitar integralmente as regras da modalidade;\n> - Marcar a ação com pelo menos 24 horas de antecedência.\n\nO descumprimento será considerado falta de compromisso e quebra de organização, passível de **advertência da facção**.",
+              "tag": "AÇÕES FECHADAS"
             },
             {
               "code": "06.20",
               "title": "Apoio Externo em Ações",
               "text": "Quando a modalidade permitir, membros de outras facções poderão participar para completar o contingente de ações médias ou grandes.\n\nO apoio deve ser previamente organizado, respeitar alianças e limites da ação e não pode ser utilizado para contornar regras de efetivo.\n\nQuando houver divisão de recompensa entre participantes, a facção organizadora deverá realizar a distribuição de forma coerente com o acordo estabelecido dentro do RP.",
               "tag": "AÇÃO"
+            },
+            {
+              "code": "06.21",
+              "title": "Regulamento da Pacificação",
+              "text": "O anúncio da pacificação deverá ser publicado oficialmente na aba **Intimações do e-mail da cidade**. A facção alvo deverá ser informada previamente sobre a data e o horário da ação.\n\nA partir do anúncio oficial, fica proibida a retirada ou o depósito de qualquer item nos baús e cofres localizados no QG da facção. Após a marcação, o **Tablet da facção será bloqueado**, impedindo contratações ou alterações no quadro de membros até o término da ação.\n\n**Penalidades aplicáveis:**\n- Confisco de **100% dos itens** armazenados nos baús de líderes e membros;\n- Confisco de **30% do saldo da facção**;\n- A organização ficará imune a novas pacificações por **30 dias**.\n\nCaso a facção seja derrotada, seus integrantes não poderão retornar ao QG ou à favela por **48 horas**. Durante as primeiras **24 horas**, a facção poderá tentar recuperar o território por meio de uma retomada contra a Polícia.\n\nCaso a facção não compareça no dia e horário estabelecidos, ficará impedida de retornar à sua base por **5 dias**.\n\nTodas as regras gerais do servidor permanecem válidas durante a pacificação. É proibido utilizar binds, macros ou mecanismos semelhantes para obter vantagem.\n\nÉ proibido que os cargos **01, 02 e 03** da facção recebam GG durante a pacificação, exceto quando se tratar de policiais. O descumprimento resultará em punição administrativa.\n\nDurante a pacificação, a Polícia poderá utilizar no máximo:\n- **03 helicópteros**;\n- **03 Caveirões**.\n\nFacções que possuírem baús ou cofres adicionais deverão informar sua localização durante o alinhamento anterior à pacificação.\n\nApós o término oficial, fica proibida a permanência ou utilização de veículos pertencentes à Polícia por qualquer jogador, devendo todos ser recolhidos o mais rápido possível.",
+              "tag": "PACIFICAÇÃO"
             }
           ]
         }
@@ -763,7 +769,7 @@
             },
             {
               "title": "Alianças e Relações entre Facções",
-              "text": "Alianças, parcerias e operações conjuntas devem existir de forma coerente dentro do RP e respeitar os limites definidos pela Administração.\n\nCada facção poderá manter **até dois aliados oficiais**, formando grupos de até três organizações.\n\n**Regras:**\n- Operações conjuntas que dependam de parceria entre facções devem respeitar alianças oficiais;\n- Facções aliadas devem produzir **itens distintos** quando a estrutura econômica da cidade exigir exclusividade de produção;\n- É proibido utilizar alianças informais apenas para somar efetivo, interferir em conflito de terceiros ou contornar limites de ações;\n- É proibido se passar por outra facção para enganar, infiltrar-se ou praticar ações em nome dela.\n\n> ⚠️ **ATENÇÃO**\n> Regras específicas de ações podem limitar ou impedir apoio externo mesmo entre aliados.",
+              "text": "Alianças, parcerias e operações conjuntas devem existir de forma coerente dentro do RP e respeitar os limites definidos pela Administração.\n\nCada facção poderá manter até **três aliados oficiais**, formando grupos de até **quatro organizações**.",
               "tag": "FACÇÃO",
               "code": "07.03"
             },
@@ -862,9 +868,9 @@
             },
             {
               "code": "07.16",
-              "title": "Divulgação de Produtos Ilegais",
-              "text": "Anúncios públicos devem preservar a imersão e utilizar a nomenclatura alternativa definida oficialmente pela cidade quando o canal exigir linguagem disfarçada.\n\nA lista oficial de termos deverá ser consultada no canal ou tabela vigente, evitando que esta regra fique desatualizada sempre que produtos forem adicionados ou renomeados.\n\n> ❌ **PROIBIDO**\n> Expor diretamente produtos ou serviços ilegais em canais públicos quando houver exigência de nomenclatura codificada.",
-              "tag": "ROLEPLAY"
+              "title": "Divulgação no /T & OLX — Termos Obrigatórios",
+              "text": "É proibido realizar divulgações no **/T & OLX** utilizando nomes explícitos de itens ilegais, como armas, munições, drogas ou serviços ilícitos. Toda divulgação deverá utilizar os termos alternativos oficiais, preservando a imersão do RP.\n\n**Substituições obrigatórias:**\n- Arma → **AirSoft**\n- Munição → **Bala Fini**\n- LSD → **Balinha**\n- Cocaína → **Farinha/Raio**\n- Maconha → **Ervas**\n- Desmanche → **Pintura**\n- Lavagem → **Lavagem de Roupa**\n- C4 → **Relógio**\n- Lockpick → **Chave Mestra**\n- Capuz → **Toca**\n- Mochila Reforçada → **Mochila Reforçada**\n- Algema → **Pulseira**\n- Colete → **Jaquetas**\n- Ticket → **Ticket**\n- Placa → **Placa Personalizada**\n- Cartão Azul → **Convite Básico**\n- Cartão Gold → **Convite Executivo**\n- Cartão Black → **Convite Premium**\n- Bloqueador de GPS → **GPS**\n- Pé de cabra → **Cabra**\n\n> ❌ “Vendo arma e munição no T ou OLX”\n> ❌ “Venda de droga e lavagem”\n> ✅ “Vendo AirSoft e Bala de AirSoft”\n> ✅ “Lavagem de Roupa disponível”\n\nO descumprimento desse padrão poderá ocasionar **investigação e exposição da facção**.",
+              "tag": "DIVULGAÇÃO"
             },
             {
               "code": "07.17",
@@ -883,6 +889,30 @@
               "title": "Revisão de Punições de Membros",
               "text": "A liderança poderá solicitar esclarecimento administrativo sobre punições de seus membros pelos canais adequados.\n\nQuando houver apresentação de material interno de análise, provas protegidas ou informações restritas, o líder deverá preservar o sigilo e repassar aos demais apenas aquilo que estiver autorizado.\n\n> ❌ **PROIBIDO**\n> Distorcer decisão administrativa, divulgar prova restrita ou utilizar conteúdo interno para fomentar exposição, perseguição ou desinformação.",
               "tag": "ADMINISTRAÇÃO"
+            },
+            {
+              "code": "07.20",
+              "title": "Dualidade de Personagens — Ilegal x Polícia",
+              "text": "Não é permitido possuir dois personagens ativos em que um atue no **ilegal** e o outro na **Polícia**, ou vice-versa. O jogador deverá escolher um dos lados para preservar a integridade do RP e impedir o compartilhamento indireto de informações.\n\n> ❌ **PROIBIDO**\n> - Personagem policial com acesso indireto a informações do ilegal;\n> - Utilizar conhecimento adquirido por um personagem para beneficiar o outro.\n\nO descumprimento será considerado **vantagem indevida**, podendo resultar em punição administrativa e perda do personagem secundário, conforme análise da Staff.",
+              "tag": "PERSONAGENS"
+            },
+            {
+              "code": "07.21",
+              "title": "Fuga para Comunidades e Territórios",
+              "text": "É proibido utilizar comunidades, sedes ou territórios de facções como destino de fuga com a finalidade de obter proteção automática, envolver terceiros sem contexto ou transformar o local em vantagem indevida.\n\nA entrada em território durante uma fuga deverá possuir coerência com o RP e respeitar as regras específicas da ação e da área.",
+              "tag": "TERRITÓRIOS"
+            },
+            {
+              "code": "07.22",
+              "title": "Punições Progressivas de Facções",
+              "text": "Facções que cometerem infrações de forma coletiva ou recorrente estarão sujeitas a punições progressivas, considerando gravidade, contexto e reincidência.\n\n**1ª Punição**\n- Prisão de todos os gerentes e líderes da facção, sem exceção;\n- Perda de **50% de todos os itens** dos baús de líderes e membros.\n\n**2ª Punição**\n- Prisão de todos os gerentes e líderes da facção, sem exceção;\n- Perda de **100% de todos os itens** dos baús de líderes e membros;\n- Perda de benefícios ativos ou adquiridos através de missões da Cúpula.\n\n**3ª Punição**\n- Remoção completa da facção da cidade;\n- Aplicação de **PD de personagem para todos os líderes e PD de membros**;\n- O valor do Painel Limpo e os itens dos baús de membros ou líderes poderão ser leiloados para outras facções.\n\nAs infrações serão avaliadas pela Administração, considerando o contexto, a gravidade e a reincidência.",
+              "tag": "PUNIÇÕES"
+            },
+            {
+              "code": "07.23",
+              "title": "Valorização do RP e Economia das Facções",
+              "text": "A obtenção de itens do ilegal deverá ocorrer por meio de **RP, negociação e movimentação legítima entre facções**. Práticas que eliminem a necessidade de interação, facilitem a obtenção sem custo ou criem benefício econômico indevido prejudicam a economia e o desenvolvimento do RP.\n\n> ❌ Conseguir itens sem negociação ou sem custo por favorecimento indevido;\n> ❌ Evitar o comércio entre facções por meio de facilidades irregulares;\n> ✅ Realizar compras e negociações dentro do RP e respeitando os valores oficiais.\n\nO descumprimento poderá ser considerado **quebra de economia e RP**, sujeito às medidas administrativas cabíveis.",
+              "tag": "ECONOMIA"
             }
           ]
         }
