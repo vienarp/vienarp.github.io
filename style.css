@@ -1856,3 +1856,67 @@ footer{
     min-width:620px;
   }
 }
+
+/* =========================================================
+   VIENA ROLEPLAY — PADRONIZAÇÃO GLOBAL DAS TABELAS V8
+   Adicionar ao FINAL do style.css.
+   Somente visual; não altera textos, códigos nem dados.
+========================================================= */
+.rule-markdown .md-table-wrap{
+  width:100%;
+  margin:26px 0 30px;
+  overflow-x:auto;
+  border:1px solid #383033;
+  border-radius:14px;
+  background:linear-gradient(150deg,#171315,#0c0b0c 75%);
+  box-shadow:0 14px 35px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.045);
+  scrollbar-width:thin;
+  scrollbar-color:#a31521 #191417;
+}
+.rule-markdown .md-table{
+  width:100%;
+  min-width:680px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:15px;
+  line-height:1.55;
+  color:#e6e2e3;
+}
+.rule-markdown .md-table thead th{
+  padding:19px 22px;
+  color:#fff;
+  background:linear-gradient(110deg,#920b16,#4d0c12);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  border-right:1px solid rgba(255,255,255,.13);
+  border-bottom:2px solid #e50914;
+  white-space:normal;
+}
+.rule-markdown .md-table th:last-child,
+.rule-markdown .md-table td:last-child{border-right:0}
+.rule-markdown .md-table td{
+  padding:18px 22px;
+  border-right:1px solid #30292c;
+  border-bottom:1px solid #30292c;
+  vertical-align:middle;
+  text-align:left;
+  font-size:15px;
+  overflow-wrap:anywhere;
+}
+.rule-markdown .md-table tbody tr:nth-child(even){background:rgba(255,255,255,.035)}
+.rule-markdown .md-table tbody tr:hover{background:rgba(229,9,20,.105)}
+.rule-markdown .md-table tbody tr:last-child td{border-bottom:0}
+.rule-markdown .md-table td strong{color:#fff;font-weight:850}
+.rule-markdown .md-table td:first-child{font-weight:700;color:#fff}
+.rule-markdown .md-table td:not(:first-child){font-variant-numeric:tabular-nums}
+@media(max-width:700px){
+  .rule-markdown .md-table-wrap{margin:20px 0 24px;border-radius:11px}
+  .rule-markdown .md-table{min-width:590px;font-size:14px}
+  .rule-markdown .md-table thead th{font-size:12px;padding:15px 17px}
+  .rule-markdown .md-table td{font-size:14px;padding:15px 17px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .rule-markdown .md-table tbody tr{transition:background-color .16s ease}
+}
